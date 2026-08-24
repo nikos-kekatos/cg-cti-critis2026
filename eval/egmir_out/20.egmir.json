@@ -1,0 +1,399 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 bd2cc2f1f25b5f520a87068475247dd5611ab9f199ed3264983d720e016acf66 (ASCII text, with very long lines (22467))",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "network",
+      "value": "contacted IP 194.36.32.203",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.129",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1106 (antidebug_guardpages)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E6",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1082 (antivm_checks_available_memory)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E7",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1055 (creates_suspended_process)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E8",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1560 (encrypt_pcinfo)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E9",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1033 (encrypt_pcinfo)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E10",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1547.001 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E11",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1112 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E12",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1547 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E13",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (network_cnc_http)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E14",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1059 (cmdline_long_string)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E15",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1064 (powershell_command_suspicious)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E16",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1059.001 (powershell_command_suspicious)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E17",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1202 (uses_windows_utilities)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E18",
+      "kind": "signature",
+      "value": "stealth_network (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E19",
+      "kind": "signature",
+      "value": "antivm_checks_available_memory (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E20",
+      "kind": "signature",
+      "value": "queries_user_name (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E21",
+      "kind": "signature",
+      "value": "encrypt_pcinfo (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E22",
+      "kind": "signature",
+      "value": "queries_locale_api (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E23",
+      "kind": "signature",
+      "value": "antidebug_setunhandledexceptionfilter (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E24",
+      "kind": "signature",
+      "value": "exec_crash (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E25",
+      "kind": "signature",
+      "value": "stealth_timeout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E26",
+      "kind": "signature",
+      "value": "language_check_registry (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E27",
+      "kind": "signature",
+      "value": "antidebug_guardpages (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E28",
+      "kind": "signature",
+      "value": "encrypted_ioc (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E29",
+      "kind": "signature",
+      "value": "creates_suspended_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E30",
+      "kind": "signature",
+      "value": "resumethread_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E31",
+      "kind": "signature",
+      "value": "terminates_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E32",
+      "kind": "signature",
+      "value": "network_cnc_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E33",
+      "kind": "signature",
+      "value": "network_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E34",
+      "kind": "signature",
+      "value": "long_commandline (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E35",
+      "kind": "signature",
+      "value": "script_tool_executed (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E36",
+      "kind": "signature",
+      "value": "uses_windows_utilities (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E37",
+      "kind": "signature",
+      "value": "persistence_autorun (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "The sample exhibits multiple malicious behaviors including anti-debugging, anti-VM checks, persistence mechanisms, and network communication with suspicious domains.",
+        "evidence_ids": [
+          "E5",
+          "E6",
+          "E10",
+          "E12",
+          "E13",
+          "E14",
+          "E15",
+          "E17",
+          "E27",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E34",
+          "E36",
+          "E37"
+        ]
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "The malware performs anti-debugging techniques such as setting guard pages and handling unhandled exceptions.",
+        "evidence_ids": [
+          "E5",
+          "E27",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E34",
+          "E36"
+        ]
+      },
+      {
+        "text": "It also conducts anti-VM checks by querying available memory and checking for specific registry entries.",
+        "evidence_ids": [
+          "E6",
+          "E19",
+          "E22",
+          "E26"
+        ]
+      },
+      {
+        "text": "Persistence is achieved through autorun mechanisms and creating suspended processes.",
+        "evidence_ids": [
+          "E10",
+          "E12",
+          "E13",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E34",
+          "E36",
+          "E37"
+        ]
+      },
+      {
+        "text": "Network communication occurs with suspicious domains and IPs, possibly for command and control purposes.",
+        "evidence_ids": [
+          "E2",
+          "E3",
+          "E4",
+          "E13",
+          "E14",
+          "E15",
+          "E17",
+          "E28",
+          "E32",
+          "E33",
+          "E34",
+          "E35"
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "The malware employs various attack techniques such as anti-debugging (T1106), anti-VM checks (T1082), persistence via autorun (T1547), and network command and control (T1071).",
+        "evidence_ids": [
+          "E5",
+          "E6",
+          "E10",
+          "E12",
+          "E13",
+          "E17"
+        ]
+      }
+    ],
+    "iocs": [
+      {
+        "text": "SHA256: bd2cc2f1f25b5f520a87068475247dd5611ab9f199ed3264983d720e016acf66",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "text": "IPs: 194.36.32.203, 40.126.32.129",
+        "evidence_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "text": "Domain: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+        "evidence_ids": [
+          "E4"
+        ]
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "The malware could potentially exfiltrate sensitive data, disrupt system operations, and evade detection by security tools.",
+        "evidence_ids": []
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "Implement strict network monitoring and segmentation to isolate potential C&C traffic. Enable endpoint protection with advanced heuristics and behavioral analysis.",
+        "evidence_ids": []
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 11,
+    "grounded": 9,
+    "flagged": 2,
+    "ungrounded": 0,
+    "grounded_pct": 81.8,
+    "flagged_pct": 18.2,
+    "ungrounded_pct": 0.0
+  }
+}

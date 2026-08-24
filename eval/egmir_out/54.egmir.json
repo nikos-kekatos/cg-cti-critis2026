@@ -1,0 +1,173 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 e77b0473ee512fa6121b864bc0e7003ef3fffda2e7a612941a10a8d6c83c68a1 (PE32 executable (GUI) Intel 80386 Mono/.)",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "network",
+      "value": "contacted IP 194.36.32.208",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.66",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "network",
+      "value": "resolved domain dl.google.com",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E6",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (stealth_network)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E7",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027.002 (packer_entropy)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E8",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027 (packer_entropy)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E9",
+      "kind": "signature",
+      "value": "stealth_network (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E10",
+      "kind": "signature",
+      "value": "network_cnc_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E11",
+      "kind": "signature",
+      "value": "network_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E12",
+      "kind": "signature",
+      "value": "packer_entropy (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E13",
+      "kind": "signature",
+      "value": "static_pe_pdbpath (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E14",
+      "kind": "signature",
+      "value": "network_questionable_http_path (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "iocs": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 12,
+    "grounded": 0,
+    "flagged": 12,
+    "ungrounded": 0,
+    "grounded_pct": 0.0,
+    "flagged_pct": 100.0,
+    "ungrounded_pct": 0.0
+  }
+}

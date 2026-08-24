@@ -1,0 +1,487 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 478a9a9ebc5993baaa14c360bd1f3a8269b92571abe6613de1f457dd448c76fa (PE32 executable (GUI) Intel 80386 Mono/.)",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "malware",
+      "value": "family [{'family': 'AgentTesla', 'details': [{'Yara': '1094a2ab0df309d72726a5a12bdea729f789c291b637726300da5c70c9802f27'}, {'Yara': '7230049e6294773feb9b5f1f1939910cd989345f5f493fcd870f37492fd14012'}]}]",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 77.111.102.202",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "contacted IP 218.208.91.162",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.6",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E6",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E7",
+      "kind": "network",
+      "value": "resolved domain ftp.freshnest2u.com",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E8",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1106 (antidebug_guardpages)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E9",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1082 (antivm_checks_available_memory)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E10",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (http_request)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E11",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1055 (creates_suspended_process)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E12",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1095 (network_icmp)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E13",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027.002 (packer_entropy)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E14",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027 (packer_entropy)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E15",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1552.001 (infostealer_ftp)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E16",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1003 (infostealer_ftp)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E17",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1005 (infostealer_ftp)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E18",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1552 (infostealer_ftp)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E19",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1114 (infostealer_mail)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E20",
+      "kind": "signature",
+      "value": "antivm_checks_available_memory (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E21",
+      "kind": "signature",
+      "value": "queries_computer_name (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E22",
+      "kind": "signature",
+      "value": "queries_user_name (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E23",
+      "kind": "signature",
+      "value": "queries_keyboard_layout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E24",
+      "kind": "signature",
+      "value": "antidebug_setunhandledexceptionfilter (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E25",
+      "kind": "signature",
+      "value": "antivm_network_adapters (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E26",
+      "kind": "signature",
+      "value": "stealth_timeout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E27",
+      "kind": "signature",
+      "value": "language_check_registry (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E28",
+      "kind": "signature",
+      "value": "antidebug_guardpages (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E29",
+      "kind": "signature",
+      "value": "encrypted_ioc (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E30",
+      "kind": "signature",
+      "value": "http_request (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E31",
+      "kind": "signature",
+      "value": "creates_suspended_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E32",
+      "kind": "signature",
+      "value": "resumethread_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E33",
+      "kind": "signature",
+      "value": "injection_write_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E34",
+      "kind": "signature",
+      "value": "reads_memory_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E35",
+      "kind": "signature",
+      "value": "terminates_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E36",
+      "kind": "signature",
+      "value": "network_cnc_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E37",
+      "kind": "signature",
+      "value": "network_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E38",
+      "kind": "signature",
+      "value": "packer_entropy (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E39",
+      "kind": "signature",
+      "value": "injection_rwx (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "The sample exhibits characteristics of the AgentTesla infostealer malware family, including anti-analysis techniques and network communication behaviors.",
+        "evidence_ids": [
+          "E2",
+          "E8",
+          "E9",
+          "E10",
+          "E11",
+          "E12",
+          "E13",
+          "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E23",
+          "E24",
+          "E25",
+          "E26",
+          "E27",
+          "E28",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39"
+        ]
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "The malware attempts to evade analysis by using anti-debugging and anti-VM techniques such as guard pages and checking available memory.",
+        "evidence_ids": [
+          "E8",
+          "E9",
+          "E28",
+          "E29"
+        ]
+      },
+      {
+        "text": "It communicates over HTTP with remote servers and uses ICMP packets for network communication.",
+        "evidence_ids": [
+          "E10",
+          "E12",
+          "E30",
+          "E36",
+          "E37"
+        ]
+      },
+      {
+        "text": "The malware collects information about the system, including computer name, user name, keyboard layout, and language settings.",
+        "evidence_ids": [
+          "E20",
+          "E21",
+          "E22",
+          "E23",
+          "E27"
+        ]
+      },
+      {
+        "text": "It establishes persistence mechanisms and performs process injection and manipulation.",
+        "evidence_ids": [
+          "E11",
+          "E13",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35"
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "The malware employs various evasion techniques such as anti-debugging (T1106), anti-VM checks (T1082), and packer entropy analysis (T1027).",
+        "evidence_ids": [
+          "E8",
+          "E9",
+          "E13",
+          "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E23",
+          "E24",
+          "E25",
+          "E26",
+          "E27",
+          "E28",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39"
+        ]
+      }
+    ],
+    "iocs": [
+      {
+        "text": "Contacted IPs: 77.111.102.202, 218.208.91.162, 40.126.32.6",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, ftp.freshnest2u.com",
+        "evidence_ids": [
+          "E6",
+          "E7"
+        ]
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "The malware is designed to steal sensitive information and establish persistence on the infected system.",
+        "evidence_ids": [
+          "E2",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E23",
+          "E24",
+          "E25",
+          "E26",
+          "E27",
+          "E28",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39"
+        ]
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "Implement strict network segmentation and monitor outbound traffic for suspicious HTTP and ICMP requests.",
+        "evidence_ids": [
+          "E10",
+          "E12",
+          "E30",
+          "E36",
+          "E37"
+        ]
+      },
+      {
+        "text": "Use endpoint detection and response (EDR) tools to detect and respond to anti-analysis techniques and process injection activities.",
+        "evidence_ids": [
+          "E8",
+          "E9",
+          "E11",
+          "E13",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35"
+        ]
+      },
+      {
+        "text": "Regularly update and patch systems to mitigate known vulnerabilities exploited by the malware.",
+        "evidence_ids": []
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 12,
+    "grounded": 11,
+    "flagged": 1,
+    "ungrounded": 0,
+    "grounded_pct": 91.7,
+    "flagged_pct": 8.3,
+    "ungrounded_pct": 0.0
+  }
+}

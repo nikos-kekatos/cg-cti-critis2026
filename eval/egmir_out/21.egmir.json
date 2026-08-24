@@ -1,0 +1,435 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7 (PE32 executable (GUI) Intel 80386 Mono/.)",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "malware",
+      "value": "family [{'family': 'DLAgent10', 'details': [{'Yara': '155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7'}, {'Yara': 'f683eaa724d3b634f8632289d19de372e3b973b17cae91c9dd825a5dcd1709aa'}]}, {'family': 'ArrowRAT', 'details': [{'Yara': '155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7'}, {'Yara': 'f683eaa724d3b634f8632289d19de372e3b973b17cae91c9dd825a5dcd1709aa'}]}, {'family': 'StormKitty', 'details': [{'Yara': '155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7'}, {'Yara': 'f683eaa724d3b634f8632289d19de372e3b973b17cae91c9dd825a5dcd1709aa'}]}, {'family': 'VenomRAT', 'details': [{'Yara': '155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7'}, {'Yara': 'f683eaa724d3b634f8632289d19de372e3b973b17cae91c9dd825a5dcd1709aa'}]}]",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 62.60.226.185",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "contacted IP 77.111.102.206",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.66",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E6",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E7",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1106 (antidebug_guardpages)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E8",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1562.001 (antisandbox_unhook)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E9",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1562 (antisandbox_unhook)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E10",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1082 (antivm_display)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E11",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1542.003 (suspicious_iocontrol_codes)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E12",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (dead_connect)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E13",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1539 (infostealer_cookies)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E14",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1055 (creates_suspended_process)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E15",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1053 (persistence_autorun_tasks)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E16",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1112 (persistence_autorun_tasks)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E17",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1057 (enumerates_running_processes)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E18",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1012 (recon_programs)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E19",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1518 (recon_programs)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E20",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1564.003 (stealth_window)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E21",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1564 (stealth_window)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E22",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1202 (suspicious_command_tools)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E23",
+      "kind": "signature",
+      "value": "antivm_checks_available_memory (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E24",
+      "kind": "signature",
+      "value": "queries_computer_name (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E25",
+      "kind": "signature",
+      "value": "queries_user_name (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E26",
+      "kind": "signature",
+      "value": "dead_connect (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E27",
+      "kind": "signature",
+      "value": "queries_keyboard_layout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E28",
+      "kind": "signature",
+      "value": "queries_locale_api (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E29",
+      "kind": "signature",
+      "value": "antidebug_setunhandledexceptionfilter (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E30",
+      "kind": "signature",
+      "value": "stealth_timeout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E31",
+      "kind": "signature",
+      "value": "language_check_registry (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E32",
+      "kind": "signature",
+      "value": "antidebug_guardpages (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E33",
+      "kind": "signature",
+      "value": "encrypted_ioc (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E34",
+      "kind": "signature",
+      "value": "creates_suspended_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E35",
+      "kind": "signature",
+      "value": "resumethread_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E36",
+      "kind": "signature",
+      "value": "reads_memory_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E37",
+      "kind": "signature",
+      "value": "enumerates_running_processes (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E38",
+      "kind": "signature",
+      "value": "process_interest (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E39",
+      "kind": "signature",
+      "value": "reads_self (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E40",
+      "kind": "signature",
+      "value": "stealth_window (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E41",
+      "kind": "signature",
+      "value": "terminates_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E42",
+      "kind": "signature",
+      "value": "network_cnc_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "The sample contacts several IPs and resolves a domain name, indicating potential command and control (C&C) communication.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5",
+          "E6"
+        ]
+      },
+      {
+        "text": "The sample employs various anti-analysis techniques such as anti-debugging, anti-sandboxing, and anti-VM detection.",
+        "evidence_ids": [
+          "E7",
+          "E8",
+          "E9",
+          "E10",
+          "E11",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39",
+          "E40",
+          "E41",
+          "E42"
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "The sample uses dead connect technique to avoid detection.",
+        "evidence_ids": [
+          "E12",
+          "E26"
+        ]
+      },
+      {
+        "text": "The sample steals cookies using infostealer technique.",
+        "evidence_ids": [
+          "E13"
+        ]
+      },
+      {
+        "text": "The sample creates suspended processes and manipulates threads in other processes.",
+        "evidence_ids": [
+          "E14",
+          "E15",
+          "E16",
+          "E33",
+          "E34",
+          "E35",
+          "E36"
+        ]
+      },
+      {
+        "text": "The sample enumerates running processes and queries system information.",
+        "evidence_ids": [
+          "E17",
+          "E18",
+          "E19",
+          "E27",
+          "E28",
+          "E37",
+          "E38"
+        ]
+      }
+    ],
+    "iocs": [
+      {
+        "text": "SHA256 hash of the sample: 155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "text": "IP addresses contacted: 62.60.226.185, 77.111.102.206, 40.126.32.66",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "text": "Domain name resolved: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+        "evidence_ids": [
+          "E6"
+        ]
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 15,
+    "grounded": 9,
+    "flagged": 6,
+    "ungrounded": 0,
+    "grounded_pct": 60.0,
+    "flagged_pct": 40.0,
+    "ungrounded_pct": 0.0
+  }
+}

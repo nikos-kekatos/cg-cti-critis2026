@@ -1,0 +1,469 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 c767bb6b6dd0b149e46b7066269b6d9fac1f9eb2dcafcec59475fd78a8af7861 (PE32 executable (GUI) Intel 80386 Mono/.)",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "malware",
+      "value": "family [{'family': 'Njrat', 'details': [{'Yara': 'c767bb6b6dd0b149e46b7066269b6d9fac1f9eb2dcafcec59475fd78a8af7861'}, {'Behavior': ''}]}]",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 194.36.32.204",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "contacted IP 62.60.226.185",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.6",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E6",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E7",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1106 (antidebug_guardpages)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E8",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1562.001 (antisandbox_unhook)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E9",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1562 (antisandbox_unhook)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E10",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1082 (antivm_display)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E11",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1542.003 (suspicious_iocontrol_codes)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E12",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (dead_connect)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E13",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1055 (creates_suspended_process)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E14",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1547.001 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E15",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1112 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E16",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1547 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E17",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1053 (persistence_autorun_tasks)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E18",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1095 (network_icmp)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E19",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1219 (njrat_regkeys)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E20",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1012 (recon_fingerprint)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E21",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1202 (suspicious_command_tools)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E22",
+      "kind": "signature",
+      "value": "antivm_checks_available_memory (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E23",
+      "kind": "signature",
+      "value": "queries_computer_name (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E24",
+      "kind": "signature",
+      "value": "queries_keyboard_layout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E25",
+      "kind": "signature",
+      "value": "queries_locale_api (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E26",
+      "kind": "signature",
+      "value": "antidebug_setunhandledexceptionfilter (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E27",
+      "kind": "signature",
+      "value": "stealth_timeout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E28",
+      "kind": "signature",
+      "value": "language_check_registry (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E29",
+      "kind": "signature",
+      "value": "antidebug_guardpages (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E30",
+      "kind": "signature",
+      "value": "dead_connect (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E31",
+      "kind": "signature",
+      "value": "encrypted_ioc (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E32",
+      "kind": "signature",
+      "value": "creates_suspended_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E33",
+      "kind": "signature",
+      "value": "resumethread_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E34",
+      "kind": "signature",
+      "value": "reads_self (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E35",
+      "kind": "signature",
+      "value": "terminates_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E36",
+      "kind": "signature",
+      "value": "network_cnc_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E37",
+      "kind": "signature",
+      "value": "network_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E38",
+      "kind": "signature",
+      "value": "injection_rwx (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E39",
+      "kind": "signature",
+      "value": "uses_windows_utilities (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E40",
+      "kind": "signature",
+      "value": "uses_windows_utilities_to_create_scheduled_task (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E41",
+      "kind": "signature",
+      "value": "antisandbox_unhook (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "The sample exhibits characteristics of the Njrat malware family, including anti-sandboxing techniques and persistence mechanisms.",
+        "evidence_ids": [
+          "E2",
+          "E9",
+          "E14",
+          "E16"
+        ]
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "The sample performs anti-debugging and anti-sandboxing techniques such as guard pages and unhooking.",
+        "evidence_ids": [
+          "E7",
+          "E8",
+          "E9",
+          "E29",
+          "E31"
+        ]
+      },
+      {
+        "text": "It attempts to persist on the system by creating autorun tasks and scheduled tasks.",
+        "evidence_ids": [
+          "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E40"
+        ]
+      },
+      {
+        "text": "The sample conducts reconnaissance by querying system information like memory availability, computer name, keyboard layout, and locale settings.",
+        "evidence_ids": [
+          "E22",
+          "E23",
+          "E24",
+          "E25",
+          "E28"
+        ]
+      },
+      {
+        "text": "It communicates with external IPs and domains, possibly for command and control purposes.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E36",
+          "E37"
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "The malware employs dead connect techniques to evade detection.",
+        "evidence_ids": [
+          "E12"
+        ]
+      },
+      {
+        "text": "It creates suspended processes and manipulates threads in remote processes.",
+        "evidence_ids": [
+          "E13",
+          "E32",
+          "E33"
+        ]
+      },
+      {
+        "text": "The malware terminates remote processes, indicating potential for lateral movement or privilege escalation.",
+        "evidence_ids": [
+          "E35"
+        ]
+      },
+      {
+        "text": "It uses Windows utilities to create scheduled tasks for persistence.",
+        "evidence_ids": [
+          "E40"
+        ]
+      },
+      {
+        "text": "The malware displays anti-VM behavior through various checks and techniques.",
+        "evidence_ids": [
+          "E10",
+          "E26",
+          "E27",
+          "E29"
+        ]
+      },
+      {
+        "text": "It uses suspicious IO control codes.",
+        "evidence_ids": [
+          "E11"
+        ]
+      },
+      {
+        "text": "The malware performs ICMP network activity.",
+        "evidence_ids": [
+          "E18"
+        ]
+      },
+      {
+        "text": "It utilizes registry keys associated with Njrat malware.",
+        "evidence_ids": [
+          "E19"
+        ]
+      },
+      {
+        "text": "The malware conducts fingerprinting of the environment.",
+        "evidence_ids": [
+          "E20"
+        ]
+      },
+      {
+        "text": "It uses suspicious command-line tools.",
+        "evidence_ids": [
+          "E21"
+        ]
+      }
+    ],
+    "iocs": [
+      {
+        "text": "SHA256 hash: c767bb6b6dd0b149e46b7066269b6d9fac1f9eb2dcafcec59475fd78a8af7861",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "text": "Contacted IPs: 194.36.32.204, 62.60.226.185, 40.126.32.6",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "text": "Resolved domain: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+        "evidence_ids": [
+          "E6"
+        ]
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "The malware could cause data exfiltration, unauthorized access, and system instability due to its persistence and evasion techniques.",
+        "evidence_ids": []
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "Implement strict network segmentation and monitoring to detect and isolate malicious communications.",
+        "evidence_ids": []
+      },
+      {
+        "text": "Use endpoint detection and response (EDR) solutions to identify and mitigate suspicious behaviors.",
+        "evidence_ids": []
+      },
+      {
+        "text": "Regularly update and patch systems to address known vulnerabilities exploited by the malware.",
+        "evidence_ids": []
+      },
+      {
+        "text": "Educate users about phishing and social engineering tactics to prevent initial infection vectors.",
+        "evidence_ids": []
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 23,
+    "grounded": 18,
+    "flagged": 5,
+    "ungrounded": 0,
+    "grounded_pct": 78.3,
+    "flagged_pct": 21.7,
+    "ungrounded_pct": 0.0
+  }
+}

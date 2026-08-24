@@ -1,0 +1,233 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 842cd640dae0c4eae792cfa2057774bbef7ccfe94cc8bcf3b189dbc03370e2d2 (PE32+ executable (GUI) x86-64, for MS Wi)",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "malware",
+      "value": "family crypto miner",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 208.91.112.55",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.66",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E6",
+      "kind": "network",
+      "value": "resolved domain pool.hashvault.pro",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E7",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (stealth_network)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E8",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1496 (cryptopool_domains)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E9",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1055 (antianalysis_tls_section)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E10",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027.002 (packer_unknown_pe_section_name)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E11",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027 (packer_unknown_pe_section_name)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E12",
+      "kind": "signature",
+      "value": "stealth_network (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E13",
+      "kind": "signature",
+      "value": "cryptopool_domains (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E14",
+      "kind": "signature",
+      "value": "antidebug_setunhandledexceptionfilter (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E15",
+      "kind": "signature",
+      "value": "stealth_timeout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E16",
+      "kind": "signature",
+      "value": "antianalysis_tls_section (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E17",
+      "kind": "signature",
+      "value": "packer_unknown_pe_section_name (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "The sample contacts known malicious IPs and domains.",
+        "evidence_ids": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "text": "The malware uses stealth techniques to avoid detection.",
+        "evidence_ids": [
+          7,
+          12
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "Uses packer unknown PE section name to evade analysis.",
+        "evidence_ids": [
+          10,
+          11,
+          17
+        ]
+      },
+      {
+        "text": "Employs TLS section to perform anti-analysis.",
+        "evidence_ids": [
+          9,
+          16
+        ]
+      },
+      {
+        "text": "Utilizes timeout mechanisms for stealth operations.",
+        "evidence_ids": [
+          15
+        ]
+      }
+    ],
+    "iocs": [
+      {
+        "text": "SHA256 hash: 842cd640dae0c4eae792cfa2057774bbef7ccfe94cc8bcf3b189dbc03370e2d2",
+        "evidence_ids": [
+          1
+        ]
+      },
+      {
+        "text": "IPs: 208.91.112.55, 40.126.32.66",
+        "evidence_ids": [
+          3,
+          4
+        ]
+      },
+      {
+        "text": "Domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, pool.hashvault.pro",
+        "evidence_ids": [
+          5,
+          6
+        ]
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "The malware may cause performance degradation due to resource-intensive mining activities.",
+        "evidence_ids": []
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "Implement network monitoring to detect and block communications with known malicious IPs and domains.",
+        "evidence_ids": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "text": "Use endpoint protection solutions that can detect and block packed executables and stealthy behaviors.",
+        "evidence_ids": [
+          10,
+          11,
+          16,
+          17
+        ]
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 13,
+    "grounded": 0,
+    "flagged": 3,
+    "ungrounded": 10,
+    "grounded_pct": 0.0,
+    "flagged_pct": 23.1,
+    "ungrounded_pct": 76.9
+  }
+}

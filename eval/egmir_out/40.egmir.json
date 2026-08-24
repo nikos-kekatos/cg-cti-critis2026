@@ -1,0 +1,138 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 7949631d3490ed9fb6b63aff678f7b203df719fe75e671ea16975c6b873010dd (PE32+ executable (DLL) (GUI) x86-64, for)",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "network",
+      "value": "contacted IP 142.250.181.195",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.131",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (stealth_network)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E6",
+      "kind": "signature",
+      "value": "stealth_network (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E7",
+      "kind": "signature",
+      "value": "antidebug_setunhandledexceptionfilter (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E8",
+      "kind": "signature",
+      "value": "stealth_timeout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E9",
+      "kind": "signature",
+      "value": "static_pe_anomaly (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "iocs": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 12,
+    "grounded": 0,
+    "flagged": 12,
+    "ungrounded": 0,
+    "grounded_pct": 0.0,
+    "flagged_pct": 100.0,
+    "ungrounded_pct": 0.0
+  }
+}

@@ -1,0 +1,474 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 89de93e69e898d5da92c572f472fc8d0b3b1162eb8d98d4790d2fd6ff849de5b (PE32+ executable (GUI) x86-64, for MS Wi)",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "network",
+      "value": "contacted IP 2.18.69.175",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 2.18.69.115",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "contacted IP 184.29.233.231",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "network",
+      "value": "contacted IP 149.154.167.99",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E6",
+      "kind": "network",
+      "value": "contacted IP 208.91.112.55",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E7",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.66",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E8",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E9",
+      "kind": "network",
+      "value": "resolved domain aware-cr1.com",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E10",
+      "kind": "network",
+      "value": "resolved domain t.me",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E11",
+      "kind": "network",
+      "value": "resolved domain sup.808skor.org",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E12",
+      "kind": "network",
+      "value": "resolved domain steamcommunity.com",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E13",
+      "kind": "network",
+      "value": "resolved domain sup.merahsm188.top",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E14",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1082 (antivm_checks_available_memory)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E15",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (dead_connect)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E16",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1547.001 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E17",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1112 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E18",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1547 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E19",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1564.003 (stealth_window)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E20",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1564 (stealth_window)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E21",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027.002 (packer_unknown_pe_section_name)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E22",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027 (packer_unknown_pe_section_name)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E23",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1070 (deletes_executed_files)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E24",
+      "kind": "signature",
+      "value": "antivm_checks_available_memory (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E25",
+      "kind": "signature",
+      "value": "queries_computer_name (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E26",
+      "kind": "signature",
+      "value": "queries_user_name (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E27",
+      "kind": "signature",
+      "value": "dead_connect (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E28",
+      "kind": "signature",
+      "value": "antidebug_setunhandledexceptionfilter (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E29",
+      "kind": "signature",
+      "value": "language_check_registry (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E30",
+      "kind": "signature",
+      "value": "reads_self (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E31",
+      "kind": "signature",
+      "value": "stealth_window (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E32",
+      "kind": "signature",
+      "value": "terminates_remote_process (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E33",
+      "kind": "signature",
+      "value": "packer_unknown_pe_section_name (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E34",
+      "kind": "signature",
+      "value": "packer_entropy (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E35",
+      "kind": "signature",
+      "value": "suspicious_tld (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E36",
+      "kind": "signature",
+      "value": "uses_windows_utilities_to_create_scheduled_task (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E37",
+      "kind": "signature",
+      "value": "persistence_autorun (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E38",
+      "kind": "signature",
+      "value": "binary_yara (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E39",
+      "kind": "signature",
+      "value": "deletes_executed_files (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "The sample exhibits multiple malicious behaviors including anti-VM checks, persistence mechanisms, and stealth techniques. It also attempts to delete executed files and communicates with suspicious domains.",
+        "evidence_ids": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "The sample performs anti-VM checks by querying available memory.",
+        "evidence_ids": [
+          14,
+          24
+        ]
+      },
+      {
+        "text": "It also queries the computer name and user name.",
+        "evidence_ids": [
+          25,
+          26
+        ]
+      },
+      {
+        "text": "The sample employs stealth techniques such as setting an unhandled exception filter and checking for debugging.",
+        "evidence_ids": [
+          28
+        ]
+      },
+      {
+        "text": "It uses language checks via the registry.",
+        "evidence_ids": [
+          29
+        ]
+      },
+      {
+        "text": "The sample reads its own file and attempts to terminate remote processes.",
+        "evidence_ids": [
+          30,
+          32
+        ]
+      },
+      {
+        "text": "It contains unknown PE section names and high entropy, suggesting the use of a packer.",
+        "evidence_ids": [
+          33,
+          34
+        ]
+      },
+      {
+        "text": "The sample communicates with suspicious top-level domains and creates scheduled tasks using Windows utilities.",
+        "evidence_ids": [
+          35,
+          36
+        ]
+      },
+      {
+        "text": "Persistence is achieved through autorun mechanisms.",
+        "evidence_ids": [
+          37,
+          38
+        ]
+      },
+      {
+        "text": "The sample attempts to delete executed files.",
+        "evidence_ids": [
+          39
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "The sample uses anti-VM checks (T1082).",
+        "evidence_ids": [
+          14
+        ]
+      },
+      {
+        "text": "It performs dead connect (T1071).",
+        "evidence_ids": [
+          15,
+          27
+        ]
+      },
+      {
+        "text": "Persistence is achieved through autorun mechanisms (T1547, T1112).",
+        "evidence_ids": [
+          16,
+          17,
+          18,
+          37,
+          38
+        ]
+      },
+      {
+        "text": "Stealth techniques are employed (T1564).",
+        "evidence_ids": [
+          19,
+          20,
+          31
+        ]
+      },
+      {
+        "text": "The sample uses unknown PE section names (T1027).",
+        "evidence_ids": [
+          21,
+          22,
+          33
+        ]
+      }
+    ],
+    "iocs": [
+      {
+        "text": "SHA256 hash: 89de93e69e898d5da92c572f472fc8d0b3b1162eb8d98d4790d2fd6ff849de5b",
+        "evidence_ids": [
+          1
+        ]
+      },
+      {
+        "text": "Contacted IPs: 2.18.69.175, 2.18.69.115, 184.29.233.231, 149.154.167.99, 208.91.112.55, 40.126.32.66",
+        "evidence_ids": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, aware-cr1.com, t.me, sup.808skor.org, sup.merahsm188.top, steamcommunity.com",
+        "evidence_ids": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "The malware could potentially cause data loss or unauthorized access due to its persistence and stealth techniques.",
+        "evidence_ids": []
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "Implement strict network segmentation and monitor outbound connections to suspicious IPs and domains.",
+        "evidence_ids": []
+      },
+      {
+        "text": "Use endpoint detection and response (EDR) tools to detect and respond to stealthy behavior.",
+        "evidence_ids": []
+      },
+      {
+        "text": "Ensure regular patching and updating of systems to mitigate known vulnerabilities exploited by the malware.",
+        "evidence_ids": []
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 22,
+    "grounded": 0,
+    "flagged": 4,
+    "ungrounded": 18,
+    "grounded_pct": 0.0,
+    "flagged_pct": 18.2,
+    "ungrounded_pct": 81.8
+  }
+}

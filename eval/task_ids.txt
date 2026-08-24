@@ -1,0 +1,4 @@
+# CRITIS 2026 corpus: CAPE task ids (35 analyses)
+# tasks 20-56 on https://cape.tech-4.eu, excluding 30/31 (System.dll, nsDialogs.dll
+# side-tasks dropped by an installer, not corpus samples).
+20 21 22 23 24 25 26 27 28 29 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56

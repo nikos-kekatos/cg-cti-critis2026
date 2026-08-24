@@ -1,0 +1,451 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 4852391f807c55bf92aa89c874b739add2d284e2669a9c9c51e8e7e76882fa8a (PE32+ executable (GUI) x86-64, for MS Wi)",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "malware",
+      "value": "family crypto miner",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 208.91.112.55",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "contacted IP 142.250.181.195",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "network",
+      "value": "contacted IP 104.26.12.205",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E6",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.129",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E7",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E8",
+      "kind": "network",
+      "value": "resolved domain rpc.sentio.xyz",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E9",
+      "kind": "network",
+      "value": "resolved domain c.pki.goog",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E10",
+      "kind": "network",
+      "value": "resolved domain pool.supportxmr.com",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E11",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (stealth_network)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E12",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1562.001 (antisandbox_unhook)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E13",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1562 (antisandbox_unhook)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E14",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1496 (cryptopool_domains)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E15",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1547.001 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E16",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1112 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E17",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1547 (persistence_autorun)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E18",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1053 (persistence_autorun_tasks)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E19",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1564.003 (stealth_window)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E20",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1564 (stealth_window)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E21",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027.002 (packer_unknown_pe_section_name)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E22",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1027 (packer_unknown_pe_section_name)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E23",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1202 (suspicious_command_tools)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E24",
+      "kind": "signature",
+      "value": "stealth_network (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E25",
+      "kind": "signature",
+      "value": "cryptopool_domains (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E26",
+      "kind": "signature",
+      "value": "queries_keyboard_layout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E27",
+      "kind": "signature",
+      "value": "queries_locale_api (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E28",
+      "kind": "signature",
+      "value": "antidebug_setunhandledexceptionfilter (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E29",
+      "kind": "signature",
+      "value": "stealth_timeout (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E30",
+      "kind": "signature",
+      "value": "stealth_window (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E31",
+      "kind": "signature",
+      "value": "network_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E32",
+      "kind": "signature",
+      "value": "packer_unknown_pe_section_name (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E33",
+      "kind": "signature",
+      "value": "packer_entropy (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E34",
+      "kind": "signature",
+      "value": "injection_rwx (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E35",
+      "kind": "signature",
+      "value": "suspicious_tld (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E36",
+      "kind": "signature",
+      "value": "uses_windows_utilities (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E37",
+      "kind": "signature",
+      "value": "antisandbox_unhook (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E38",
+      "kind": "signature",
+      "value": "persistence_autorun (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E39",
+      "kind": "signature",
+      "value": "persistence_autorun_tasks (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E40",
+      "kind": "signature",
+      "value": "antisandbox_suspend (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E41",
+      "kind": "signature",
+      "value": "suspicious_command_tools (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "The sample is identified as a crypto mining malware that exhibits anti-sandboxing techniques and persistence mechanisms.",
+        "evidence_ids": [
+          "E2",
+          "E12",
+          "E13",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E38",
+          "E39"
+        ]
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "Contacts multiple IPs and domains, including known cryptocurrency mining pools and suspicious domains.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "text": "Uses anti-sandboxing techniques to evade detection.",
+        "evidence_ids": [
+          "E11",
+          "E12",
+          "E13",
+          "E27",
+          "E28",
+          "E29",
+          "E37"
+        ]
+      },
+      {
+        "text": "Implements persistence mechanisms to ensure continued operation.",
+        "evidence_ids": [
+          "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E38",
+          "E39"
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "Utilizes stealth techniques to avoid detection.",
+        "evidence_ids": [
+          "E11",
+          "E19",
+          "E20",
+          "E29",
+          "E30"
+        ]
+      },
+      {
+        "text": "Manipulates PE section names to evade analysis.",
+        "evidence_ids": [
+          "E21",
+          "E22",
+          "E32"
+        ]
+      },
+      {
+        "text": "Suspicious command-line tools usage detected.",
+        "evidence_ids": [
+          "E24",
+          "E35"
+        ]
+      }
+    ],
+    "iocs": [
+      {
+        "text": "SHA256 hash: 4852391f807c55bf92aa89c874b739add2d284e2669a9c9c51e8e7e76882fa8a",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "text": "Contacted IPs: 208.91.112.55, 142.250.181.195, 104.26.12.205, 40.126.32.129",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5",
+          "E6"
+        ]
+      },
+      {
+        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, rpc.sentio.xyz, c.pki.goog, pool.supportxmr.com",
+        "evidence_ids": [
+          "E7",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "The malware could potentially cause resource exhaustion on infected systems due to its mining activities.",
+        "evidence_ids": [
+          "E2",
+          "E10"
+        ]
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "Implement strict network access controls to prevent communication with known malicious IPs and domains.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "text": "Use endpoint protection solutions that can detect and block known crypto-mining malware families.",
+        "evidence_ids": [
+          "E2"
+        ]
+      },
+      {
+        "text": "Regularly update and patch systems to mitigate persistence mechanisms.",
+        "evidence_ids": [
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E38",
+          "E39"
+        ]
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 14,
+    "grounded": 14,
+    "flagged": 0,
+    "ungrounded": 0,
+    "grounded_pct": 100.0,
+    "flagged_pct": 0.0,
+    "ungrounded_pct": 0.0
+  }
+}

@@ -1,0 +1,8 @@
+# CAPE report JSONs (~620 MB) — fetch with the loop in README.md
+reports_corpus/
+*.json.gz
+__pycache__/
+*.pyc
+# never commit credentials
+.env
+*.key

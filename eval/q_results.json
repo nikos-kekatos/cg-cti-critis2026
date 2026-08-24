@@ -1,0 +1,625 @@
+{
+  "aggregate": {
+    "samples": 35,
+    "stix_lib_used": false,
+    "Q1_conversion_validity_pct": 100.0,
+    "Q1_objects": {
+      "built": 515,
+      "valid": 515
+    },
+    "Q2_yield_mean": 96,
+    "Q2_yield_range": [
+      1,
+      1362
+    ],
+    "Q3_attack_techniques_total_unique": 39,
+    "Q3_attack_techniques_mean_per_sample": 6.7,
+    "Q6_analysis_duration_s_p50": 157.0,
+    "Q6_analysis_duration_s_p95": 202.2,
+    "Q6_stix_transform_ms_p50": 0.0,
+    "Q6_stix_transform_ms_p95": 0.0
+  },
+  "per_sample": [
+    {
+      "id": "20",
+      "sha256": "bd2cc2f1f25b",
+      "yield_Q2": 15,
+      "iocs": {
+        "file": 1,
+        "ips": 2,
+        "domains": 1,
+        "urls": 10,
+        "registry": 1
+      },
+      "attack_techniques_Q3": 13,
+      "stix_built": 27,
+      "stix_valid": 27,
+      "analysis_duration_s": 231
+    },
+    {
+      "id": "21",
+      "sha256": "155d1dce8e17",
+      "yield_Q2": 138,
+      "iocs": {
+        "file": 1,
+        "ips": 3,
+        "domains": 1,
+        "urls": 10,
+        "registry": 123
+      },
+      "attack_techniques_Q3": 16,
+      "stix_built": 31,
+      "stix_valid": 31,
+      "analysis_duration_s": 163
+    },
+    {
+      "id": "22",
+      "sha256": "478a9a9ebc59",
+      "yield_Q2": 34,
+      "iocs": {
+        "file": 1,
+        "ips": 3,
+        "domains": 2,
+        "urls": 10,
+        "registry": 18
+      },
+      "attack_techniques_Q3": 12,
+      "stix_built": 28,
+      "stix_valid": 28,
+      "analysis_duration_s": 160
+    },
+    {
+      "id": "23",
+      "sha256": "52f447218c94",
+      "yield_Q2": 1,
+      "iocs": {
+        "file": 1,
+        "ips": 0,
+        "domains": 0,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 2,
+      "stix_built": 3,
+      "stix_valid": 3,
+      "analysis_duration_s": 191
+    },
+    {
+      "id": "24",
+      "sha256": "58928c973bd7",
+      "yield_Q2": 3,
+      "iocs": {
+        "file": 1,
+        "ips": 1,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 3,
+      "stix_built": 6,
+      "stix_valid": 6,
+      "analysis_duration_s": 63
+    },
+    {
+      "id": "25",
+      "sha256": "748c32e37183",
+      "yield_Q2": 21,
+      "iocs": {
+        "file": 1,
+        "ips": 3,
+        "domains": 2,
+        "urls": 10,
+        "registry": 5
+      },
+      "attack_techniques_Q3": 3,
+      "stix_built": 19,
+      "stix_valid": 19,
+      "analysis_duration_s": 157
+    },
+    {
+      "id": "26",
+      "sha256": "c48e3a289464",
+      "yield_Q2": 3,
+      "iocs": {
+        "file": 1,
+        "ips": 1,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 1,
+      "stix_built": 4,
+      "stix_valid": 4,
+      "analysis_duration_s": 65
+    },
+    {
+      "id": "27",
+      "sha256": "f10a3669a6a5",
+      "yield_Q2": 1,
+      "iocs": {
+        "file": 1,
+        "ips": 0,
+        "domains": 0,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 3,
+      "stix_built": 4,
+      "stix_valid": 4,
+      "analysis_duration_s": 191
+    },
+    {
+      "id": "28",
+      "sha256": "029a364b8137",
+      "yield_Q2": 5,
+      "iocs": {
+        "file": 1,
+        "ips": 2,
+        "domains": 2,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 3,
+      "stix_built": 8,
+      "stix_valid": 8,
+      "analysis_duration_s": 173
+    },
+    {
+      "id": "29",
+      "sha256": "155d1dce8e17",
+      "yield_Q2": 1362,
+      "iocs": {
+        "file": 1,
+        "ips": 6,
+        "domains": 6,
+        "urls": 10,
+        "registry": 1339
+      },
+      "attack_techniques_Q3": 27,
+      "stix_built": 50,
+      "stix_valid": 50,
+      "analysis_duration_s": 147
+    },
+    {
+      "id": "32",
+      "sha256": "478a9a9ebc59",
+      "yield_Q2": 4,
+      "iocs": {
+        "file": 1,
+        "ips": 1,
+        "domains": 2,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 4,
+      "stix_built": 8,
+      "stix_valid": 8,
+      "analysis_duration_s": 179
+    },
+    {
+      "id": "33",
+      "sha256": "4852391f807c",
+      "yield_Q2": 11,
+      "iocs": {
+        "file": 1,
+        "ips": 4,
+        "domains": 4,
+        "urls": 2,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 13,
+      "stix_built": 24,
+      "stix_valid": 24,
+      "analysis_duration_s": 50
+    },
+    {
+      "id": "34",
+      "sha256": "4f4f30d07cc0",
+      "yield_Q2": 1,
+      "iocs": {
+        "file": 1,
+        "ips": 0,
+        "domains": 0,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 1,
+      "stix_built": 2,
+      "stix_valid": 2,
+      "analysis_duration_s": 192
+    },
+    {
+      "id": "35",
+      "sha256": "52f447218c94",
+      "yield_Q2": 15,
+      "iocs": {
+        "file": 1,
+        "ips": 5,
+        "domains": 6,
+        "urls": 3,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 13,
+      "stix_built": 28,
+      "stix_valid": 28,
+      "analysis_duration_s": 50
+    },
+    {
+      "id": "36",
+      "sha256": "58928c973bd7",
+      "yield_Q2": 20,
+      "iocs": {
+        "file": 1,
+        "ips": 3,
+        "domains": 1,
+        "urls": 10,
+        "registry": 5
+      },
+      "attack_techniques_Q3": 16,
+      "stix_built": 31,
+      "stix_valid": 31,
+      "analysis_duration_s": 152
+    },
+    {
+      "id": "37",
+      "sha256": "6925fdec115c",
+      "yield_Q2": 3,
+      "iocs": {
+        "file": 1,
+        "ips": 1,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 1,
+      "stix_built": 4,
+      "stix_valid": 4,
+      "analysis_duration_s": 43
+    },
+    {
+      "id": "38",
+      "sha256": "748c32e37183",
+      "yield_Q2": 3,
+      "iocs": {
+        "file": 1,
+        "ips": 1,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 2,
+      "stix_built": 5,
+      "stix_valid": 5,
+      "analysis_duration_s": 172
+    },
+    {
+      "id": "39",
+      "sha256": "76da85ad5be2",
+      "yield_Q2": 1,
+      "iocs": {
+        "file": 1,
+        "ips": 0,
+        "domains": 0,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 2,
+      "stix_built": 3,
+      "stix_valid": 3,
+      "analysis_duration_s": 190
+    },
+    {
+      "id": "40",
+      "sha256": "7949631d3490",
+      "yield_Q2": 4,
+      "iocs": {
+        "file": 1,
+        "ips": 2,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 1,
+      "stix_built": 5,
+      "stix_valid": 5,
+      "analysis_duration_s": 40
+    },
+    {
+      "id": "41",
+      "sha256": "842cd640dae0",
+      "yield_Q2": 5,
+      "iocs": {
+        "file": 1,
+        "ips": 2,
+        "domains": 2,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 5,
+      "stix_built": 10,
+      "stix_valid": 10,
+      "analysis_duration_s": 54
+    },
+    {
+      "id": "42",
+      "sha256": "86fe031101b1",
+      "yield_Q2": 17,
+      "iocs": {
+        "file": 1,
+        "ips": 6,
+        "domains": 7,
+        "urls": 3,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 13,
+      "stix_built": 30,
+      "stix_valid": 30,
+      "analysis_duration_s": 70
+    },
+    {
+      "id": "43",
+      "sha256": "89de93e69e89",
+      "yield_Q2": 17,
+      "iocs": {
+        "file": 1,
+        "ips": 6,
+        "domains": 6,
+        "urls": 0,
+        "registry": 4
+      },
+      "attack_techniques_Q3": 10,
+      "stix_built": 23,
+      "stix_valid": 23,
+      "analysis_duration_s": 160
+    },
+    {
+      "id": "44",
+      "sha256": "932aa31eb7fa",
+      "yield_Q2": 1,
+      "iocs": {
+        "file": 1,
+        "ips": 0,
+        "domains": 0,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 2,
+      "stix_built": 3,
+      "stix_valid": 3,
+      "analysis_duration_s": 195
+    },
+    {
+      "id": "45",
+      "sha256": "9eacc45bc8c6",
+      "yield_Q2": 5,
+      "iocs": {
+        "file": 1,
+        "ips": 3,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 1,
+      "stix_built": 6,
+      "stix_valid": 6,
+      "analysis_duration_s": 35
+    },
+    {
+      "id": "46",
+      "sha256": "b08f921c92a2",
+      "yield_Q2": 5,
+      "iocs": {
+        "file": 1,
+        "ips": 3,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 1,
+      "stix_built": 6,
+      "stix_valid": 6,
+      "analysis_duration_s": 35
+    },
+    {
+      "id": "47",
+      "sha256": "b7ce2cf4c4a9",
+      "yield_Q2": 5,
+      "iocs": {
+        "file": 1,
+        "ips": 2,
+        "domains": 2,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 5,
+      "stix_built": 10,
+      "stix_valid": 10,
+      "analysis_duration_s": 55
+    },
+    {
+      "id": "48",
+      "sha256": "bae3dd2745c3",
+      "yield_Q2": 3,
+      "iocs": {
+        "file": 1,
+        "ips": 1,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 1,
+      "stix_built": 4,
+      "stix_valid": 4,
+      "analysis_duration_s": 69
+    },
+    {
+      "id": "49",
+      "sha256": "bb313ea63402",
+      "yield_Q2": 4,
+      "iocs": {
+        "file": 1,
+        "ips": 2,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 1,
+      "stix_built": 5,
+      "stix_valid": 5,
+      "analysis_duration_s": 41
+    },
+    {
+      "id": "50",
+      "sha256": "c48e3a289464",
+      "yield_Q2": 1,
+      "iocs": {
+        "file": 1,
+        "ips": 0,
+        "domains": 0,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 1,
+      "stix_built": 2,
+      "stix_valid": 2,
+      "analysis_duration_s": 191
+    },
+    {
+      "id": "51",
+      "sha256": "c767bb6b6dd0",
+      "yield_Q2": 1345,
+      "iocs": {
+        "file": 1,
+        "ips": 3,
+        "domains": 1,
+        "urls": 10,
+        "registry": 1330
+      },
+      "attack_techniques_Q3": 15,
+      "stix_built": 30,
+      "stix_valid": 30,
+      "analysis_duration_s": 150
+    },
+    {
+      "id": "52",
+      "sha256": "e16ea5b58924",
+      "yield_Q2": 3,
+      "iocs": {
+        "file": 1,
+        "ips": 1,
+        "domains": 1,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 5,
+      "stix_built": 8,
+      "stix_valid": 8,
+      "analysis_duration_s": 164
+    },
+    {
+      "id": "53",
+      "sha256": "e5bccb979fef",
+      "yield_Q2": 29,
+      "iocs": {
+        "file": 1,
+        "ips": 5,
+        "domains": 1,
+        "urls": 10,
+        "registry": 12
+      },
+      "attack_techniques_Q3": 10,
+      "stix_built": 27,
+      "stix_valid": 27,
+      "analysis_duration_s": 154
+    },
+    {
+      "id": "54",
+      "sha256": "e77b0473ee51",
+      "yield_Q2": 16,
+      "iocs": {
+        "file": 1,
+        "ips": 2,
+        "domains": 2,
+        "urls": 11,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 3,
+      "stix_built": 19,
+      "stix_valid": 19,
+      "analysis_duration_s": 160
+    },
+    {
+      "id": "55",
+      "sha256": "f10a3669a6a5",
+      "yield_Q2": 1,
+      "iocs": {
+        "file": 1,
+        "ips": 0,
+        "domains": 0,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 3,
+      "stix_built": 4,
+      "stix_valid": 4,
+      "analysis_duration_s": 193
+    },
+    {
+      "id": "56",
+      "sha256": "fe1e3f38e6bd",
+      "yield_Q2": 258,
+      "iocs": {
+        "file": 1,
+        "ips": 3,
+        "domains": 1,
+        "urls": 10,
+        "registry": 243
+      },
+      "attack_techniques_Q3": 23,
+      "stix_built": 38,
+      "stix_valid": 38,
+      "analysis_duration_s": 164
+    }
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1005",
+    "T1012",
+    "T1027",
+    "T1027.002",
+    "T1033",
+    "T1053",
+    "T1055",
+    "T1057",
+    "T1059",
+    "T1059.001",
+    "T1064",
+    "T1070",
+    "T1070.006",
+    "T1071",
+    "T1082",
+    "T1095",
+    "T1106",
+    "T1112",
+    "T1114",
+    "T1129",
+    "T1202",
+    "T1219",
+    "T1485",
+    "T1496",
+    "T1518",
+    "T1539",
+    "T1542.003",
+    "T1547",
+    "T1547.001",
+    "T1552",
+    "T1552.001",
+    "T1560",
+    "T1562",
+    "T1562.001",
+    "T1564",
+    "T1564.003",
+    "T1568",
+    "T1573"
+  ]
+}

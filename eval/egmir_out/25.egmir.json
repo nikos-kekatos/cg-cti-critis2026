@@ -1,0 +1,240 @@
+{
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "file",
+      "value": "SHA256 748c32e3718319e569d7a71eab5ace7589ed012764902b55475faab82a63c89b (PE32 executable (GUI) Intel 80386, for M)",
+      "durability": "atomic",
+      "confidence": "attested"
+    },
+    {
+      "id": "E2",
+      "kind": "malware",
+      "value": "family [{'family': 'Remcos', 'details': [{'Yara': '748c32e3718319e569d7a71eab5ace7589ed012764902b55475faab82a63c89b'}]}]",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E3",
+      "kind": "network",
+      "value": "contacted IP 194.36.32.204",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E4",
+      "kind": "network",
+      "value": "contacted IP 208.91.112.55",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E5",
+      "kind": "network",
+      "value": "contacted IP 40.126.32.66",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E6",
+      "kind": "network",
+      "value": "resolved domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E7",
+      "kind": "network",
+      "value": "resolved domain papilawdns.duckdns.org",
+      "durability": "atomic",
+      "confidence": "observed"
+    },
+    {
+      "id": "E8",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1071 (dead_connect)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E9",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1568 (network_dyndns)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E10",
+      "kind": "attack-pattern",
+      "value": "ATT&CK technique T1095 (network_icmp)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E11",
+      "kind": "signature",
+      "value": "queries_user_name (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E12",
+      "kind": "signature",
+      "value": "dead_connect (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E13",
+      "kind": "signature",
+      "value": "antidebug_setunhandledexceptionfilter (severity 1)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E14",
+      "kind": "signature",
+      "value": "network_cnc_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E15",
+      "kind": "signature",
+      "value": "network_dyndns (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E16",
+      "kind": "signature",
+      "value": "network_http (severity 2)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E17",
+      "kind": "signature",
+      "value": "binary_yara (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E18",
+      "kind": "signature",
+      "value": "network_icmp (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    },
+    {
+      "id": "E19",
+      "kind": "signature",
+      "value": "network_questionable_http_path (severity 3)",
+      "durability": "behavioural",
+      "confidence": "attested"
+    }
+  ],
+  "egmir": {
+    "executive_summary": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "observed_behaviours": [
+      {
+        "text": "The malware attempts to contact multiple IPs and domains, indicating potential C&C server communication.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7"
+        ]
+      },
+      {
+        "text": "It uses techniques such as dead connect and dynamic DNS to evade detection.",
+        "evidence_ids": [
+          "E8",
+          "E9"
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "Uses dead connect technique (T1071) to establish covert communication channels.",
+        "evidence_ids": [
+          "E8"
+        ]
+      },
+      {
+        "text": "Employs dynamic DNS (T1568) for C&C server communication.",
+        "evidence_ids": [
+          "E9"
+        ]
+      }
+    ],
+    "iocs": [
+      {
+        "text": "SHA256 hash: 748c32e3718319e569d7a71eab5ace7589ed012764902b55475faab82a63c89b",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "text": "Contacted IPs: 194.36.32.204, 208.91.112.55, 40.126.32.66",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, papilawdns.duckdns.org",
+        "evidence_ids": [
+          "E6",
+          "E7"
+        ]
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "The malware may attempt to gather user information and establish persistent connections to C&C servers.",
+        "evidence_ids": [
+          "E11",
+          "E14",
+          "E16",
+          "E17",
+          "E18",
+          "E19"
+        ]
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "Implement network monitoring and intrusion detection systems to detect and block suspicious traffic patterns.",
+        "evidence_ids": []
+      },
+      {
+        "text": "Use endpoint protection solutions that can identify and block known malicious binaries.",
+        "evidence_ids": [
+          "E1",
+          "E17"
+        ]
+      }
+    ]
+  },
+  "grounding": {
+    "statements": 12,
+    "grounded": 9,
+    "flagged": 3,
+    "ungrounded": 0,
+    "grounded_pct": 75.0,
+    "flagged_pct": 25.0,
+    "ungrounded_pct": 0.0
+  }
+}

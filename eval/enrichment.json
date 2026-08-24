@@ -1,0 +1,702 @@
+{
+  "aggregate": {
+    "reports": 35,
+    "total_observables": 171,
+    "total_corroborated": 51,
+    "corroboration_rate_Q4": 0.298,
+    "family_agreement_rate": 0.308
+  },
+  "per_report": [
+    {
+      "file": "20.json",
+      "sha256": "bd2cc2f1f25b5f520a87068475247dd5611ab9f199ed3264983d720e016acf66",
+      "sandbox_family": "",
+      "techniques": 13,
+      "observables": 4,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "NeptuneRAT"
+        }
+      ],
+      "corroboration_rate": 0.25
+    },
+    {
+      "file": "21.json",
+      "sha256": "155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7",
+      "sandbox_family": "DLAgent10,ArrowRAT,StormKitty,VenomRAT",
+      "techniques": 16,
+      "observables": 5,
+      "corroborated": 2,
+      "family_agreement": false,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "njrat"
+        },
+        {
+          "type": "network",
+          "ioc": "62.60.226.185",
+          "source": "ThreatFox",
+          "label": "NjRAT"
+        }
+      ],
+      "corroboration_rate": 0.4
+    },
+    {
+      "file": "22.json",
+      "sha256": "478a9a9ebc5993baaa14c360bd1f3a8269b92571abe6613de1f457dd448c76fa",
+      "sandbox_family": "AgentTesla",
+      "techniques": 12,
+      "observables": 6,
+      "corroborated": 1,
+      "family_agreement": true,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "AgentTesla"
+        }
+      ],
+      "corroboration_rate": 0.167
+    },
+    {
+      "file": "23.json",
+      "sha256": "52f447218c94376f552d1c2b5bfa01c4ef2b5d32ac9ac061236cd286a9efba67",
+      "sandbox_family": "",
+      "techniques": 2,
+      "observables": 1,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "CoinMiner"
+        }
+      ],
+      "corroboration_rate": 1.0
+    },
+    {
+      "file": "24.json",
+      "sha256": "58928c973bd77cabdf6bca123c77f7915c3f335f42e364893c2673d954d22d93",
+      "sandbox_family": "",
+      "techniques": 3,
+      "observables": 3,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "AsyncRAT"
+        }
+      ],
+      "corroboration_rate": 0.333
+    },
+    {
+      "file": "25.json",
+      "sha256": "748c32e3718319e569d7a71eab5ace7589ed012764902b55475faab82a63c89b",
+      "sandbox_family": "Remcos",
+      "techniques": 3,
+      "observables": 6,
+      "corroborated": 2,
+      "family_agreement": true,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "RemcosRAT"
+        },
+        {
+          "type": "network",
+          "ioc": "papilawdns.duckdns.org",
+          "source": "ThreatFox",
+          "label": "Remcos"
+        }
+      ],
+      "corroboration_rate": 0.333
+    },
+    {
+      "file": "26.json",
+      "sha256": "c48e3a289464eec1e638c36ec12996e1c3e71d4b0c098baf94f89086c2ac69d7",
+      "sandbox_family": "",
+      "techniques": 1,
+      "observables": 3,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "WannaCry"
+        }
+      ],
+      "corroboration_rate": 0.333
+    },
+    {
+      "file": "27.json",
+      "sha256": "f10a3669a6a50dbf030646ffc0e2aceab6a779d76d2a768fb7f613088549f268",
+      "sandbox_family": "",
+      "techniques": 3,
+      "observables": 1,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "Formbook"
+        }
+      ],
+      "corroboration_rate": 1.0
+    },
+    {
+      "file": "28.json",
+      "sha256": "029a364b81370e6f680886c2e1a0751cc45d1539db9ef0b9b55265def3422259",
+      "sandbox_family": "",
+      "techniques": 3,
+      "observables": 5,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "CoinMiner"
+        }
+      ],
+      "corroboration_rate": 0.2
+    },
+    {
+      "file": "29.json",
+      "sha256": "155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7",
+      "sandbox_family": "DLAgent10,ArrowRAT,StormKitty,VenomRAT,CoinMiner02",
+      "techniques": 27,
+      "observables": 13,
+      "corroborated": 6,
+      "family_agreement": false,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "njrat"
+        },
+        {
+          "type": "network",
+          "ioc": "62.60.226.185",
+          "source": "ThreatFox",
+          "label": "NjRAT"
+        },
+        {
+          "type": "network",
+          "ioc": "aware-cr1.com",
+          "source": "ThreatFox",
+          "label": "Vidar"
+        },
+        {
+          "type": "network",
+          "ioc": "telegram.me",
+          "source": "ThreatFox",
+          "label": "Vidar"
+        },
+        {
+          "type": "network",
+          "ioc": "steamcommunity.com",
+          "source": "ThreatFox",
+          "label": "Vidar"
+        },
+        {
+          "type": "network",
+          "ioc": "bdm.kencangsm188.top",
+          "source": "ThreatFox",
+          "label": "Vidar"
+        }
+      ],
+      "corroboration_rate": 0.462
+    },
+    {
+      "file": "32.json",
+      "sha256": "478a9a9ebc5993baaa14c360bd1f3a8269b92571abe6613de1f457dd448c76fa",
+      "sandbox_family": "",
+      "techniques": 4,
+      "observables": 4,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "AgentTesla"
+        }
+      ],
+      "corroboration_rate": 0.25
+    },
+    {
+      "file": "33.json",
+      "sha256": "4852391f807c55bf92aa89c874b739add2d284e2669a9c9c51e8e7e76882fa8a",
+      "sandbox_family": "crypto miner",
+      "techniques": 13,
+      "observables": 9,
+      "corroborated": 1,
+      "family_agreement": false,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "CoinMiner"
+        }
+      ],
+      "corroboration_rate": 0.111
+    },
+    {
+      "file": "34.json",
+      "sha256": "4f4f30d07cc0ed90a92e39b637da4dc99aa76f36cff2362d4d907d77a2465ee5",
+      "sandbox_family": "",
+      "techniques": 1,
+      "observables": 1,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "WannaCry"
+        }
+      ],
+      "corroboration_rate": 1.0
+    },
+    {
+      "file": "35.json",
+      "sha256": "52f447218c94376f552d1c2b5bfa01c4ef2b5d32ac9ac061236cd286a9efba67",
+      "sandbox_family": "crypto miner",
+      "techniques": 13,
+      "observables": 12,
+      "corroborated": 1,
+      "family_agreement": false,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "CoinMiner"
+        }
+      ],
+      "corroboration_rate": 0.083
+    },
+    {
+      "file": "36.json",
+      "sha256": "58928c973bd77cabdf6bca123c77f7915c3f335f42e364893c2673d954d22d93",
+      "sandbox_family": "XWorm",
+      "techniques": 16,
+      "observables": 5,
+      "corroborated": 2,
+      "family_agreement": false,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "AsyncRAT"
+        },
+        {
+          "type": "network",
+          "ioc": "194.116.236.216",
+          "source": "ThreatFox",
+          "label": "XWorm"
+        }
+      ],
+      "corroboration_rate": 0.4
+    },
+    {
+      "file": "37.json",
+      "sha256": "6925fdec115ca580da0c37cf3804ec6252d1210a4af5acc205bf695aa8d0e0e9",
+      "sandbox_family": "",
+      "techniques": 1,
+      "observables": 3,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "WannaCry"
+        }
+      ],
+      "corroboration_rate": 0.333
+    },
+    {
+      "file": "38.json",
+      "sha256": "748c32e3718319e569d7a71eab5ace7589ed012764902b55475faab82a63c89b",
+      "sandbox_family": "Remcos",
+      "techniques": 2,
+      "observables": 3,
+      "corroborated": 2,
+      "family_agreement": true,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "RemcosRAT"
+        },
+        {
+          "type": "network",
+          "ioc": "papilawdns.duckdns.org",
+          "source": "ThreatFox",
+          "label": "Remcos"
+        }
+      ],
+      "corroboration_rate": 0.667
+    },
+    {
+      "file": "39.json",
+      "sha256": "76da85ad5be21209b93a67040dca0e5fff144730fdff49ec8447b8b2b3dca7a2",
+      "sandbox_family": "",
+      "techniques": 2,
+      "observables": 1,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "CoinMiner"
+        }
+      ],
+      "corroboration_rate": 1.0
+    },
+    {
+      "file": "40.json",
+      "sha256": "7949631d3490ed9fb6b63aff678f7b203df719fe75e671ea16975c6b873010dd",
+      "sandbox_family": "",
+      "techniques": 1,
+      "observables": 4,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "WannaCry"
+        }
+      ],
+      "corroboration_rate": 0.25
+    },
+    {
+      "file": "41.json",
+      "sha256": "842cd640dae0c4eae792cfa2057774bbef7ccfe94cc8bcf3b189dbc03370e2d2",
+      "sandbox_family": "crypto miner",
+      "techniques": 5,
+      "observables": 5,
+      "corroborated": 1,
+      "family_agreement": false,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "CoinMiner"
+        }
+      ],
+      "corroboration_rate": 0.2
+    },
+    {
+      "file": "42.json",
+      "sha256": "86fe031101b19d7f9ca74392f638684715447baded94d81ef62799d0b72b4057",
+      "sandbox_family": "crypto miner",
+      "techniques": 13,
+      "observables": 14,
+      "corroborated": 1,
+      "family_agreement": false,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "CoinMiner"
+        }
+      ],
+      "corroboration_rate": 0.071
+    },
+    {
+      "file": "43.json",
+      "sha256": "89de93e69e898d5da92c572f472fc8d0b3b1162eb8d98d4790d2fd6ff849de5b",
+      "sandbox_family": "",
+      "techniques": 10,
+      "observables": 13,
+      "corroborated": 5,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "njrat"
+        },
+        {
+          "type": "network",
+          "ioc": "aware-cr1.com",
+          "source": "ThreatFox",
+          "label": "Vidar"
+        },
+        {
+          "type": "network",
+          "ioc": "sup.808skor.org",
+          "source": "ThreatFox",
+          "label": "Vidar"
+        },
+        {
+          "type": "network",
+          "ioc": "steamcommunity.com",
+          "source": "ThreatFox",
+          "label": "Vidar"
+        },
+        {
+          "type": "network",
+          "ioc": "sup.merahsm188.top",
+          "source": "ThreatFox",
+          "label": "Vidar"
+        }
+      ],
+      "corroboration_rate": 0.385
+    },
+    {
+      "file": "44.json",
+      "sha256": "932aa31eb7fa070617035b427aab26a148eaee8e9d4d69da22b5ae89279b3adb",
+      "sandbox_family": "",
+      "techniques": 2,
+      "observables": 1,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "CoinMiner"
+        }
+      ],
+      "corroboration_rate": 1.0
+    },
+    {
+      "file": "45.json",
+      "sha256": "9eacc45bc8c6a2e4954e116d9cd8add64f89e14d1c7d6c1c0027ba6d93c6086a",
+      "sandbox_family": "",
+      "techniques": 1,
+      "observables": 5,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "WannaCry"
+        }
+      ],
+      "corroboration_rate": 0.2
+    },
+    {
+      "file": "46.json",
+      "sha256": "b08f921c92a29a0a8449ee27d6860597d7a34baf8d609ca7dbcb06c32d5b2f80",
+      "sandbox_family": "",
+      "techniques": 1,
+      "observables": 5,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "WannaCry"
+        }
+      ],
+      "corroboration_rate": 0.2
+    },
+    {
+      "file": "47.json",
+      "sha256": "b7ce2cf4c4a9cf3a2906bd3f53fff00f2c3e8ae4200451bf6194b00d94617490",
+      "sandbox_family": "crypto miner",
+      "techniques": 5,
+      "observables": 5,
+      "corroborated": 1,
+      "family_agreement": false,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "CoinMiner"
+        }
+      ],
+      "corroboration_rate": 0.2
+    },
+    {
+      "file": "48.json",
+      "sha256": "bae3dd2745c3822b1bc6b869f10bf56167195452dd65104d76f5089537ab6fc2",
+      "sandbox_family": "",
+      "techniques": 1,
+      "observables": 3,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "WannaCry"
+        }
+      ],
+      "corroboration_rate": 0.333
+    },
+    {
+      "file": "49.json",
+      "sha256": "bb313ea63402edd0fac30bad39a56e2405bee5b4f07013b09af72ef6c382a731",
+      "sandbox_family": "",
+      "techniques": 1,
+      "observables": 4,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "WannaCry"
+        }
+      ],
+      "corroboration_rate": 0.25
+    },
+    {
+      "file": "50.json",
+      "sha256": "c48e3a289464eec1e638c36ec12996e1c3e71d4b0c098baf94f89086c2ac69d7",
+      "sandbox_family": "",
+      "techniques": 1,
+      "observables": 1,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "WannaCry"
+        }
+      ],
+      "corroboration_rate": 1.0
+    },
+    {
+      "file": "51.json",
+      "sha256": "c767bb6b6dd0b149e46b7066269b6d9fac1f9eb2dcafcec59475fd78a8af7861",
+      "sandbox_family": "Njrat",
+      "techniques": 15,
+      "observables": 5,
+      "corroborated": 2,
+      "family_agreement": true,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "njrat"
+        },
+        {
+          "type": "network",
+          "ioc": "62.60.226.185",
+          "source": "ThreatFox",
+          "label": "NjRAT"
+        }
+      ],
+      "corroboration_rate": 0.4
+    },
+    {
+      "file": "52.json",
+      "sha256": "e16ea5b5892442616eb4b0d8e53a242e6532b77db42202d33b78ef9461745cc5",
+      "sandbox_family": "",
+      "techniques": 5,
+      "observables": 3,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "njrat"
+        }
+      ],
+      "corroboration_rate": 0.333
+    },
+    {
+      "file": "53.json",
+      "sha256": "e5bccb979fef3945c64622c6ad4461947eca123465f2989d9f4af879fd467890",
+      "sandbox_family": "",
+      "techniques": 10,
+      "observables": 7,
+      "corroborated": 2,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "RemcosRAT"
+        },
+        {
+          "type": "network",
+          "ioc": "58.96.75.176",
+          "source": "ThreatFox",
+          "label": "Remcos"
+        }
+      ],
+      "corroboration_rate": 0.286
+    },
+    {
+      "file": "54.json",
+      "sha256": "e77b0473ee512fa6121b864bc0e7003ef3fffda2e7a612941a10a8d6c83c68a1",
+      "sandbox_family": "",
+      "techniques": 3,
+      "observables": 5,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "AsyncRAT"
+        }
+      ],
+      "corroboration_rate": 0.2
+    },
+    {
+      "file": "55.json",
+      "sha256": "f10a3669a6a50dbf030646ffc0e2aceab6a779d76d2a768fb7f613088549f268",
+      "sandbox_family": "",
+      "techniques": 3,
+      "observables": 1,
+      "corroborated": 1,
+      "family_agreement": null,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "Formbook"
+        }
+      ],
+      "corroboration_rate": 1.0
+    },
+    {
+      "file": "56.json",
+      "sha256": "fe1e3f38e6bd2ec3cfcacc946a22c8d8212f083c8165cb3caa9ae301c25332ff",
+      "sandbox_family": "XWorm",
+      "techniques": 23,
+      "observables": 5,
+      "corroborated": 2,
+      "family_agreement": false,
+      "hits": [
+        {
+          "type": "file",
+          "source": "MalwareBazaar",
+          "label": "AsyncRAT"
+        },
+        {
+          "type": "network",
+          "ioc": "109.248.150.244",
+          "source": "ThreatFox",
+          "label": "XWorm"
+        }
+      ],
+      "corroboration_rate": 0.4
+    }
+  ]
+}
