@@ -298,18 +298,19 @@
   "egmir": {
     "executive_summary": [
       {
-        "text": "The sample exhibits behaviors consistent with the XWorm malware family, including anti-debugging techniques, anti-VM checks, and data exfiltration attempts.",
+        "text": "The sample exhibits characteristics of the XWorm malware family, including antidebugging, anti-VM detection, and stealth techniques. It also attempts to exfiltrate data via HTTP and ICMP protocols.",
         "evidence_ids": [
           "E2",
           "E7",
           "E8",
-          "E10"
+          "E10",
+          "E16"
         ]
       }
     ],
     "observed_behaviours": [
       {
-        "text": "The malware contacts several IPs and resolves a suspicious domain.",
+        "text": "The malware contacts multiple IPs and resolves a suspicious domain.",
         "evidence_ids": [
           "E3",
           "E4",
@@ -318,81 +319,73 @@
         ]
       },
       {
-        "text": "It employs various stealth techniques such as creating suspended processes and manipulating window states.",
+        "text": "It employs various stealth and evasion techniques such as creating suspended processes and using guard pages.",
         "evidence_ids": [
           "E11",
           "E14",
-          "E15"
+          "E29",
+          "E38"
         ]
       },
       {
-        "text": "The malware also uses encryption to protect stolen information.",
+        "text": "The malware uses encryption to protect information and performs checks for debugging and virtual machine environments.",
         "evidence_ids": [
           "E12",
-          "E13"
-        ]
-      }
-    ],
-    "attack_techniques": [
-      {
-        "text": "The malware uses anti-debugging techniques like guard pages and unhandled exception filters.",
-        "evidence_ids": [
-          "E7",
-          "E29"
-        ]
-      },
-      {
-        "text": "It performs anti-VM checks by querying available memory and checking for specific conditions.",
-        "evidence_ids": [
-          "E8",
-          "E23",
-          "E24",
-          "E25",
+          "E13",
           "E26",
-          "E27",
-          "E28"
+          "E36"
         ]
       },
       {
-        "text": "The malware attempts to establish command and control (C&C) communication via HTTP requests.",
+        "text": "It attempts to exfiltrate data through HTTP and ICMP protocols.",
         "evidence_ids": [
           "E16",
           "E40",
           "E41"
         ]
-      },
+      }
+    ],
+    "attack_techniques": [
       {
-        "text": "It employs packing techniques with high entropy to evade detection.",
+        "text": "Uses anti-debugging techniques (T1106).",
         "evidence_ids": [
-          "E17",
-          "E18",
-          "E42"
+          "E7"
         ]
       },
       {
-        "text": "The malware uses dead connections to check if a network connection is active.",
+        "text": "Detects if running in a virtual machine environment (T1082).",
         "evidence_ids": [
-          "E9",
-          "E25"
+          "E8"
         ]
       },
       {
-        "text": "It steals cookies and other sensitive information from the infected system.",
+        "text": "Attempts to establish communication with command and control servers (T1055).",
         "evidence_ids": [
-          "E10",
-          "E26"
+          "E11"
+        ]
+      },
+      {
+        "text": "Encrypts personal computer information (T1560).",
+        "evidence_ids": [
+          "E12"
+        ]
+      },
+      {
+        "text": "Steals cookies from browsers (T1059).",
+        "evidence_ids": [
+          "E21"
+        ]
+      },
+      {
+        "text": "Executes scripts to perform malicious actions (T1064).",
+        "evidence_ids": [
+          "E22"
         ]
       }
     ],
     "iocs": [
       {
-        "text": "SHA256 hash: 58928c973bd77cabdf6bca123c77f7915c3f335f42e364893c2673d954d22d93",
-        "evidence_ids": [
-          "E1"
-        ]
-      },
-      {
-        "text": "Contacted IPs: 194.116.236.216, 77.111.102.204, 40.126.32.66",
+        "text": "Contacts specific IPs: 194.116.236.216, 77.111.102.204, 40.126.32.66.",
         "evidence_ids": [
           "E3",
           "E4",
@@ -400,50 +393,77 @@
         ]
       },
       {
-        "text": "Resolved domain: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+        "text": "Resolves the domain -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net.",
         "evidence_ids": [
           "E6"
+        ]
+      },
+      {
+        "text": "Uses encryption to protect information (T1560).",
+        "evidence_ids": [
+          "E12"
+        ]
+      },
+      {
+        "text": "Attempts to exfiltrate data through HTTP and ICMP protocols.",
+        "evidence_ids": [
+          "E16",
+          "E40",
+          "E41"
         ]
       }
     ],
     "likely_impact": [
       {
-        "text": "The malware can steal sensitive information, establish C&C communications, and evade detection mechanisms.",
+        "text": "The malware could potentially steal sensitive information and exfiltrate it to remote servers.",
         "evidence_ids": [
           "E10",
-          "E16",
-          "E26",
-          "E40"
+          "E16"
+        ]
+      },
+      {
+        "text": "It may cause system instability due to its aggressive behavior and use of stealth techniques.",
+        "evidence_ids": [
+          "E14",
+          "E15"
         ]
       }
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement strict network segmentation and monitoring to detect and block C&C traffic.",
+        "text": "Implement strict network access controls and monitor outbound traffic for unusual patterns.",
         "evidence_ids": [
-          "E16",
-          "E40"
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E16"
         ]
       },
       {
-        "text": "Use endpoint protection solutions that can detect and block known malicious hashes.",
+        "text": "Use endpoint protection solutions that can detect and block suspicious behaviors like creating suspended processes.",
         "evidence_ids": [
-          "E1"
+          "E11",
+          "E29"
         ]
       },
       {
-        "text": "Regularly update and patch systems to mitigate vulnerabilities exploited by the malware.",
-        "evidence_ids": []
+        "text": "Regularly update security policies to counteract new evasion techniques used by malware.",
+        "evidence_ids": [
+          "E7",
+          "E8",
+          "E12"
+        ]
       }
     ]
   },
   "grounding": {
-    "statements": 17,
-    "grounded": 16,
-    "flagged": 1,
+    "statements": 20,
+    "grounded": 20,
+    "flagged": 0,
     "ungrounded": 0,
-    "grounded_pct": 94.1,
-    "flagged_pct": 5.9,
+    "grounded_pct": 100.0,
+    "flagged_pct": 0.0,
     "ungrounded_pct": 0.0
   }
 }

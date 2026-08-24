@@ -126,62 +126,102 @@
     ],
     "observed_behaviours": [
       {
-        "text": "text",
-        "evidence_ids": []
+        "text": "The sample contacts known malicious IPs and domains.",
+        "evidence_ids": [
+          3,
+          4,
+          5,
+          6,
+          8
+        ]
       },
       {
-        "text": "evidence_ids",
-        "evidence_ids": []
+        "text": "The sample employs stealth techniques to avoid detection.",
+        "evidence_ids": [
+          7,
+          12
+        ]
       }
     ],
     "attack_techniques": [
       {
-        "text": "text",
-        "evidence_ids": []
+        "text": "Uses packer unknown PE section name to obfuscate its structure.",
+        "evidence_ids": [
+          10,
+          11,
+          16
+        ]
       },
       {
-        "text": "evidence_ids",
-        "evidence_ids": []
+        "text": "Attempts to bypass analysis by manipulating TLS sections.",
+        "evidence_ids": [
+          9,
+          15
+        ]
       }
     ],
     "iocs": [
       {
-        "text": "text",
-        "evidence_ids": []
+        "text": "SHA256: b7ce2cf4c4a9cf3a2906bd3f53fff00f2c3e8ae4200451bf6194b00d94617490",
+        "evidence_ids": [
+          1
+        ]
       },
       {
-        "text": "evidence_ids",
-        "evidence_ids": []
+        "text": "IPs: 208.91.112.55, 40.126.32.129",
+        "evidence_ids": [
+          3,
+          4
+        ]
+      },
+      {
+        "text": "Domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, pool.hashvault.pro",
+        "evidence_ids": [
+          5,
+          6
+        ]
       }
     ],
     "likely_impact": [
       {
-        "text": "text",
-        "evidence_ids": []
-      },
-      {
-        "text": "evidence_ids",
+        "text": "Potential resource consumption and data exfiltration.",
         "evidence_ids": []
       }
     ],
     "recommended_mitigations": [
       {
-        "text": "text",
-        "evidence_ids": []
+        "text": "Implement network monitoring and blocklisted IPs/domains.",
+        "evidence_ids": [
+          3,
+          4,
+          5,
+          6
+        ]
       },
       {
-        "text": "evidence_ids",
-        "evidence_ids": []
+        "text": "Use endpoint protection with heuristic and behavioral analysis capabilities.",
+        "evidence_ids": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
       }
     ]
   },
   "grounding": {
     "statements": 12,
     "grounded": 0,
-    "flagged": 12,
-    "ungrounded": 0,
+    "flagged": 3,
+    "ungrounded": 9,
     "grounded_pct": 0.0,
-    "flagged_pct": 100.0,
-    "ungrounded_pct": 0.0
+    "flagged_pct": 25.0,
+    "ungrounded_pct": 75.0
   }
 }

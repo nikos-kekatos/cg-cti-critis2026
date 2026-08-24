@@ -295,7 +295,6 @@
         "evidence_ids": [
           "E2",
           "E9",
-          "E14",
           "E16"
         ]
       }
@@ -312,7 +311,28 @@
         ]
       },
       {
-        "text": "It attempts to persist on the system by creating autorun tasks and scheduled tasks.",
+        "text": "It attempts to identify sandbox environments through various checks like memory availability, computer name, keyboard layout, locale API, and more.",
+        "evidence_ids": [
+          "E22",
+          "E23",
+          "E24",
+          "E25",
+          "E26",
+          "E27",
+          "E28"
+        ]
+      },
+      {
+        "text": "The malware establishes command and control (C&C) communication by contacting specific IPs and domains.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5",
+          "E6"
+        ]
+      },
+      {
+        "text": "Persistence mechanisms are employed, including autorun and scheduled tasks.",
         "evidence_ids": [
           "E14",
           "E15",
@@ -320,105 +340,34 @@
           "E17",
           "E40"
         ]
-      },
-      {
-        "text": "The sample conducts reconnaissance by querying system information like memory availability, computer name, keyboard layout, and locale settings.",
-        "evidence_ids": [
-          "E22",
-          "E23",
-          "E24",
-          "E25",
-          "E28"
-        ]
-      },
-      {
-        "text": "It communicates with external IPs and domains, possibly for command and control purposes.",
-        "evidence_ids": [
-          "E3",
-          "E4",
-          "E5",
-          "E6",
-          "E36",
-          "E37"
-        ]
       }
     ],
     "attack_techniques": [
       {
-        "text": "The malware employs dead connect techniques to evade detection.",
+        "text": "The malware uses dead connections and ICMP network traffic for communication.",
         "evidence_ids": [
-          "E12"
-        ]
-      },
-      {
-        "text": "It creates suspended processes and manipulates threads in remote processes.",
-        "evidence_ids": [
-          "E13",
-          "E32",
-          "E33"
-        ]
-      },
-      {
-        "text": "The malware terminates remote processes, indicating potential for lateral movement or privilege escalation.",
-        "evidence_ids": [
-          "E35"
-        ]
-      },
-      {
-        "text": "It uses Windows utilities to create scheduled tasks for persistence.",
-        "evidence_ids": [
-          "E40"
-        ]
-      },
-      {
-        "text": "The malware displays anti-VM behavior through various checks and techniques.",
-        "evidence_ids": [
-          "E10",
-          "E26",
-          "E27",
-          "E29"
-        ]
-      },
-      {
-        "text": "It uses suspicious IO control codes.",
-        "evidence_ids": [
-          "E11"
-        ]
-      },
-      {
-        "text": "The malware performs ICMP network activity.",
-        "evidence_ids": [
+          "E12",
           "E18"
         ]
       },
       {
-        "text": "It utilizes registry keys associated with Njrat malware.",
+        "text": "Suspicious IoControl codes and fingerprinting techniques are used.",
         "evidence_ids": [
-          "E19"
-        ]
-      },
-      {
-        "text": "The malware conducts fingerprinting of the environment.",
-        "evidence_ids": [
+          "E11",
           "E20"
         ]
       },
       {
-        "text": "It uses suspicious command-line tools.",
+        "text": "The sample employs suspicious command-line tools and registry keys associated with Njrat.",
         "evidence_ids": [
+          "E19",
           "E21"
         ]
       }
     ],
     "iocs": [
       {
-        "text": "SHA256 hash: c767bb6b6dd0b149e46b7066269b6d9fac1f9eb2dcafcec59475fd78a8af7861",
-        "evidence_ids": [
-          "E1"
-        ]
-      },
-      {
-        "text": "Contacted IPs: 194.36.32.204, 62.60.226.185, 40.126.32.6",
+        "text": "IP addresses: 194.36.32.204, 62.60.226.185, 40.126.32.6",
         "evidence_ids": [
           "E3",
           "E4",
@@ -426,7 +375,7 @@
         ]
       },
       {
-        "text": "Resolved domain: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+        "text": "Domain: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
         "evidence_ids": [
           "E6"
         ]
@@ -434,36 +383,38 @@
     ],
     "likely_impact": [
       {
-        "text": "The malware could cause data exfiltration, unauthorized access, and system instability due to its persistence and evasion techniques.",
-        "evidence_ids": []
+        "text": "The malware could potentially exfiltrate data, execute arbitrary code, and establish persistence on the infected system.",
+        "evidence_ids": [
+          "E36",
+          "E37",
+          "E38",
+          "E39",
+          "E40"
+        ]
       }
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement strict network segmentation and monitoring to detect and isolate malicious communications.",
+        "text": "Implement strict network segmentation and monitoring to detect and block C&C communications.",
         "evidence_ids": []
       },
       {
-        "text": "Use endpoint detection and response (EDR) solutions to identify and mitigate suspicious behaviors.",
+        "text": "Use endpoint detection and response (EDR) solutions to monitor for suspicious IoCs and behaviors.",
         "evidence_ids": []
       },
       {
-        "text": "Regularly update and patch systems to address known vulnerabilities exploited by the malware.",
-        "evidence_ids": []
-      },
-      {
-        "text": "Educate users about phishing and social engineering tactics to prevent initial infection vectors.",
+        "text": "Regularly update and patch systems to mitigate known vulnerabilities exploited by the malware.",
         "evidence_ids": []
       }
     ]
   },
   "grounding": {
-    "statements": 23,
-    "grounded": 18,
-    "flagged": 5,
+    "statements": 14,
+    "grounded": 11,
+    "flagged": 3,
     "ungrounded": 0,
-    "grounded_pct": 78.3,
-    "flagged_pct": 21.7,
+    "grounded_pct": 78.6,
+    "flagged_pct": 21.4,
     "ungrounded_pct": 0.0
   }
 }

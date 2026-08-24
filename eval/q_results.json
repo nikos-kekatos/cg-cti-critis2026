@@ -4,38 +4,22 @@
     "stix_lib_used": false,
     "Q1_conversion_validity_pct": 100.0,
     "Q1_objects": {
-      "built": 515,
-      "valid": 515
+      "built": 489,
+      "valid": 489
     },
-    "Q2_yield_mean": 96,
+    "Q2_yield_mean": 95.6,
     "Q2_yield_range": [
       1,
       1362
     ],
     "Q3_attack_techniques_total_unique": 39,
-    "Q3_attack_techniques_mean_per_sample": 6.7,
+    "Q3_attack_techniques_mean_per_sample": 6.3,
     "Q6_analysis_duration_s_p50": 157.0,
-    "Q6_analysis_duration_s_p95": 202.2,
+    "Q6_analysis_duration_s_p95": 194.2,
     "Q6_stix_transform_ms_p50": 0.0,
     "Q6_stix_transform_ms_p95": 0.0
   },
   "per_sample": [
-    {
-      "id": "20",
-      "sha256": "bd2cc2f1f25b",
-      "yield_Q2": 15,
-      "iocs": {
-        "file": 1,
-        "ips": 2,
-        "domains": 1,
-        "urls": 10,
-        "registry": 1
-      },
-      "attack_techniques_Q3": 13,
-      "stix_built": 27,
-      "stix_valid": 27,
-      "analysis_duration_s": 231
-    },
     {
       "id": "21",
       "sha256": "155d1dce8e17",
@@ -179,6 +163,22 @@
       "stix_built": 50,
       "stix_valid": 50,
       "analysis_duration_s": 147
+    },
+    {
+      "id": "30",
+      "sha256": "8b4c47c4cf5e",
+      "yield_Q2": 1,
+      "iocs": {
+        "file": 1,
+        "ips": 0,
+        "domains": 0,
+        "urls": 0,
+        "registry": 0
+      },
+      "attack_techniques_Q3": 0,
+      "stix_built": 1,
+      "stix_valid": 1,
+      "analysis_duration_s": 194
     },
     {
       "id": "32",

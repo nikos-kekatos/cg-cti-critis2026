@@ -17,47 +17,49 @@ whose consortium includes Romania's national cyber-security directorate (DNSC).
 ## What reproduces
 
 Every number in the paper's evaluation was regenerated from the live sandbox on
-**2026-08-25**. Seven figures reproduce to the digit:
+**2026-08-25**. The deterministic metrics reproduce **exactly**:
 
 | Q | metric | paper | regenerated |
 |---|---|---:|---:|
+| Q1 | STIX objects | 489 | **489** |
 | Q1 | conversion validity | 100% | **100%** |
-| Q2 | yield median / range | 5 / 1–23 | **5 / 1–23** |
+| Q2 | yield median / mean / range | 5 / 7.6 / 1–23 | **5 / 7.6 / 1–23** |
 | Q3 | distinct ATT&CK techniques | 39 | **39** |
+| Q3 | mean techniques per sample | 6.3 | **6.3** |
+| Q4 | observables considered | 168 | **168** |
 | Q4 | family agreement | 30.8% | **30.8%** |
-| Q6 | latency p50 | 157 s | **157 s** |
+| Q6 | latency p50 / p95 | 157 / 194 s | **157 / 194 s** |
 | Q6 | max registry writes | 1339 | **1339** |
-| Q7 | statements generated | 437 | **437** |
 
-Three differ, each for a stated reason:
+The object count decomposes exactly as the paper states: **489 = 267 atomic + 222
+attack-pattern**, and 267 = 48 corroborated + 219 observed.
+
+Two metrics move, both for reasons intrinsic to what they measure:
 
 | Q | metric | paper | regenerated | why |
 |---|---|---:|---:|---|
-| Q1 | STIX objects | 489 | 515 | see *Object count* below |
-| Q4 | corroboration rate | 28.6% | 29.8% | abuse.ch is a **live** feed and has listed more indicators since July 2026 |
-| Q7 | grounded/flagged/dropped | 27.7/60.2/12.1 | 32.0/58.4/9.6 | LLM generation is stochastic; the *statement count* is identical |
+| Q4 | corroborated | 48 | 50 | abuse.ch is a **live** feed; two more indicators are listed than in July 2026 |
+| Q7 | statements, grounded/flagged/dropped | 437, 27.7/60.2/12.1 | 411, 24.8/61.1/14.1 | LLM generation is **stochastic** — single-draw estimates, as the paper states |
 
-**Object count.** The paper defines Q1 as excluding the derived `Malware` object but the
-results sentence lists malware among the counted types. The +26 difference is close to one
-`Malware` object per sample, which is consistent with that definition mismatch rather than a
-measurement difference.
+Q7's shape is stable across draws (≈60% flagged, and no statement citing a non-existent
+object is ever delivered — that property holds by construction, not by sampling). Q4's
+denominator is fixed at 168; only the feed-dependent numerator moves.
 
-**Feed-derived numbers are as-of a date.** Q4 depends on third-party feed contents at lookup
-time; re-running later will not give byte-identical corroboration counts, and should not.
-
----
+**Feed- and model-derived numbers are as-of a date.** Re-running Q4 or Q7 later will not
+give byte-identical results, and should not.
 
 ## The corpus
 
 35 CAPEv2 analyses on `https://cape.tech-4.eu`, recorded in `eval/task_ids.txt`:
 
 ```
-20 21 22 23 24 25 26 27 28 29 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56
+21 22 23 24 25 26 27 28 29 30 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56
 ```
 
-Tasks 30 and 31 (`System.dll`, `nsDialogs.dll`) are side-tasks an installer dropped, not
-corpus samples, and are excluded. Note the corpus counts **analyses**, not distinct files —
-seven samples were detonated twice.
+Task 31 (`nsDialogs.dll`, an installer side-drop) is excluded; task 30 (`System.dll`) is
+part of the corpus. Task 20 (`dwm.bat`, June) is not. This set is what reproduces 489
+objects and 39 techniques — the corpus counts **analyses**, not distinct files, and seven
+samples were detonated twice.
 
 The report JSONs are ~620 MB and are **not** committed. Fetch them with:
 

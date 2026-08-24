@@ -117,16 +117,61 @@
         "evidence_ids": []
       }
     ],
-    "observed_behaviours": [],
-    "attack_techniques": [],
-    "iocs": [],
-    "likely_impact": [],
-    "recommended_mitigations": []
+    "observed_behaviours": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "iocs": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "likely_impact": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "text",
+        "evidence_ids": []
+      },
+      {
+        "text": "evidence_ids",
+        "evidence_ids": []
+      }
+    ]
   },
   "grounding": {
-    "statements": 2,
+    "statements": 12,
     "grounded": 0,
-    "flagged": 2,
+    "flagged": 12,
     "ungrounded": 0,
     "grounded_pct": 0.0,
     "flagged_pct": 100.0,

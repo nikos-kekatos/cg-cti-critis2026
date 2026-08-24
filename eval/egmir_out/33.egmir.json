@@ -291,23 +291,28 @@
   "egmir": {
     "executive_summary": [
       {
-        "text": "The sample is identified as a crypto mining malware that exhibits anti-sandboxing techniques and persistence mechanisms.",
+        "text": "The sample is identified as a crypto mining malware that exhibits behaviors consistent with anti-sandboxing techniques and persistence mechanisms.",
         "evidence_ids": [
           "E2",
+          "E11",
           "E12",
           "E13",
+          "E14",
           "E15",
           "E16",
           "E17",
           "E18",
-          "E38",
-          "E39"
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E23"
         ]
       }
     ],
     "observed_behaviours": [
       {
-        "text": "Contacts multiple IPs and domains, including known cryptocurrency mining pools and suspicious domains.",
+        "text": "The malware contacts several IPs and domains, including known cryptocurrency mining pools and Microsoft AIK domains.",
         "evidence_ids": [
           "E3",
           "E4",
@@ -318,35 +323,11 @@
           "E9",
           "E10"
         ]
-      },
-      {
-        "text": "Uses anti-sandboxing techniques to evade detection.",
-        "evidence_ids": [
-          "E11",
-          "E12",
-          "E13",
-          "E27",
-          "E28",
-          "E29",
-          "E37"
-        ]
-      },
-      {
-        "text": "Implements persistence mechanisms to ensure continued operation.",
-        "evidence_ids": [
-          "E14",
-          "E15",
-          "E16",
-          "E17",
-          "E18",
-          "E38",
-          "E39"
-        ]
       }
     ],
     "attack_techniques": [
       {
-        "text": "Utilizes stealth techniques to avoid detection.",
+        "text": "The sample employs various stealth techniques such as network obfuscation and window hiding.",
         "evidence_ids": [
           "E11",
           "E19",
@@ -356,18 +337,22 @@
         ]
       },
       {
-        "text": "Manipulates PE section names to evade analysis.",
+        "text": "It also uses persistence mechanisms like autorun tasks and registry modifications.",
         "evidence_ids": [
-          "E21",
-          "E22",
-          "E32"
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E38",
+          "E39"
         ]
       },
       {
-        "text": "Suspicious command-line tools usage detected.",
+        "text": "The malware demonstrates anti-sandboxing capabilities through unhooking and suspending processes.",
         "evidence_ids": [
-          "E24",
-          "E35"
+          "E12",
+          "E13",
+          "E40"
         ]
       }
     ],
@@ -388,7 +373,7 @@
         ]
       },
       {
-        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, rpc.sentio.xyz, c.pki.goog, pool.supportxmr.com",
+        "text": "Resolved Domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, rpc.sentio.xyz, c.pki.goog, pool.supportxmr.com",
         "evidence_ids": [
           "E7",
           "E8",
@@ -399,7 +384,7 @@
     ],
     "likely_impact": [
       {
-        "text": "The malware could potentially cause resource exhaustion on infected systems due to its mining activities.",
+        "text": "The malware is likely to cause resource consumption on infected systems due to its crypto-mining activities.",
         "evidence_ids": [
           "E2",
           "E10"
@@ -408,7 +393,7 @@
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement strict network access controls to prevent communication with known malicious IPs and domains.",
+        "text": "Implement network monitoring and intrusion detection systems to identify and block communication with known malicious IPs and domains.",
         "evidence_ids": [
           "E3",
           "E4",
@@ -421,27 +406,28 @@
         ]
       },
       {
-        "text": "Use endpoint protection solutions that can detect and block known crypto-mining malware families.",
+        "text": "Use endpoint protection solutions that can detect and block the execution of suspicious executables based on behavioral analysis.",
         "evidence_ids": [
-          "E2"
-        ]
-      },
-      {
-        "text": "Regularly update and patch systems to mitigate persistence mechanisms.",
-        "evidence_ids": [
+          "E11",
+          "E12",
+          "E13",
+          "E14",
           "E15",
           "E16",
           "E17",
           "E18",
-          "E38",
-          "E39"
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E23"
         ]
       }
     ]
   },
   "grounding": {
-    "statements": 14,
-    "grounded": 14,
+    "statements": 11,
+    "grounded": 11,
     "flagged": 0,
     "ungrounded": 0,
     "grounded_pct": 100.0,

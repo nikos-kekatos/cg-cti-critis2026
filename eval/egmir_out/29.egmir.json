@@ -431,10 +431,11 @@
   "egmir": {
     "executive_summary": [
       {
-        "text": "The sample exhibits multiple behaviors indicative of a RAT (Remote Access Trojan), including anti-sandboxing techniques, persistence mechanisms, and data exfiltration.",
+        "text": "The sample exhibits multiple malicious behaviors and techniques indicative of a sophisticated malware, including anti-sandboxing, persistence mechanisms, and data exfiltration.",
         "evidence_ids": [
           "E2",
           "E15",
+          "E16",
           "E17",
           "E18",
           "E27",
@@ -451,88 +452,67 @@
           "E38",
           "E39",
           "E40",
-          "E41"
+          "E41",
+          "E42",
+          "E43",
+          "E44",
+          "E45",
+          "E46",
+          "E47",
+          "E48",
+          "E49",
+          "E50",
+          "E51",
+          "E52",
+          "E53",
+          "E54",
+          "E55",
+          "E56",
+          "E57",
+          "E58",
+          "E59",
+          "E60",
+          "E61"
         ]
       }
     ],
     "observed_behaviours": [
       {
-        "text": "The sample attempts to bypass sandbox detection by using anti-sandboxing techniques such as unhooking and checking for virtual machine environments.",
+        "text": "The malware attempts to bypass sandbox detection by using various anti-sandboxing techniques such as unhooking and stealth window operations.",
         "evidence_ids": [
           "E17",
           "E18",
-          "E19",
-          "E20",
-          "E21",
-          "E22",
-          "E23",
-          "E24",
-          "E25",
-          "E26",
-          "E27",
-          "E28",
-          "E29",
-          "E30",
-          "E31",
-          "E32",
-          "E33",
           "E34",
-          "E35",
-          "E36",
-          "E37",
-          "E38",
-          "E39",
-          "E40",
-          "E41"
+          "E35"
         ]
       },
       {
-        "text": "It also employs persistence mechanisms like creating autorun tasks and using registry keys to ensure execution on subsequent system reboots.",
+        "text": "It performs reconnaissance on the system by querying user names, computer names, and locale settings.",
         "evidence_ids": [
-          "E27",
-          "E28",
-          "E29",
-          "E30",
-          "E31",
-          "E32",
-          "E33",
-          "E34",
-          "E35",
-          "E36",
-          "E37",
-          "E38",
-          "E39",
-          "E40",
-          "E41"
-        ]
-      },
-      {
-        "text": "The sample performs reconnaissance activities such as querying computer name, user name, keyboard layout, and locale settings.",
-        "evidence_ids": [
-          "E42",
           "E43",
           "E44",
-          "E45",
-          "E46",
-          "E47",
-          "E48",
-          "E49",
-          "E50",
-          "E51",
-          "E52",
-          "E53",
-          "E54",
-          "E55",
-          "E56",
-          "E57",
-          "E58",
-          "E59",
-          "E60",
-          "E61"
+          "E48"
         ]
       },
       {
-        "text": "Additionally, it establishes command and control (C2) communications over HTTPS with suspicious domains and IPs.",
+        "text": "The malware establishes persistence through autorun mechanisms and scheduled tasks.",
+        "evidence_ids": [
+          "E27",
+          "E28",
+          "E29",
+          "E30"
+        ]
+      },
+      {
+        "text": "It uses PowerShell commands in a suspicious manner to execute code.",
+        "evidence_ids": [
+          "E38",
+          "E39",
+          "E40"
+        ]
+      },
+      {
+        "text": "The malware contacts several IPs and domains, some of which are known to be associated with malicious activities.",
         "evidence_ids": [
           "E3",
           "E4",
@@ -545,204 +525,98 @@
           "E11",
           "E12",
           "E13",
-          "E14",
-          "E15",
-          "E16",
-          "E17",
-          "E18",
-          "E19",
-          "E20",
-          "E21",
-          "E22",
-          "E23",
-          "E24",
-          "E25",
-          "E26",
-          "E27",
-          "E28",
-          "E29",
-          "E30",
-          "E31",
-          "E32",
-          "E33",
-          "E34",
-          "E35",
-          "E36",
-          "E37",
-          "E38",
-          "E39",
-          "E40",
-          "E41",
-          "E42",
-          "E43",
-          "E44",
-          "E45",
-          "E46",
-          "E47",
-          "E48",
-          "E49",
-          "E50",
-          "E51",
-          "E52",
-          "E53",
-          "E54",
-          "E55",
-          "E56",
-          "E57",
-          "E58",
-          "E59",
-          "E60",
-          "E61"
+          "E14"
         ]
       }
     ],
     "attack_techniques": [
       {
-        "text": "The sample uses various techniques to evade detection and analysis, such as anti-debugging, anti-sandboxing, and persistence methods.",
+        "text": "The malware employs techniques such as anomalous delete file operations, anti-debugging measures, and suspicious IoControl codes.",
         "evidence_ids": [
-          "E17",
-          "E18",
-          "E19",
+          "E15",
+          "E16",
           "E20",
-          "E21",
-          "E22",
-          "E23",
-          "E24",
-          "E25",
-          "E26",
-          "E27",
-          "E28",
-          "E29",
-          "E30",
-          "E31",
-          "E32",
-          "E33",
-          "E34",
-          "E35",
-          "E36",
-          "E37",
-          "E38",
-          "E39",
-          "E40",
-          "E41"
+          "E53",
+          "E54"
         ]
       },
       {
-        "text": "It also conducts reconnaissance to gather information about the environment and establish persistence.",
+        "text": "It also uses stealth techniques like creating suspended processes and hiding its network communications.",
         "evidence_ids": [
-          "E42",
-          "E43",
-          "E44",
-          "E45",
-          "E46",
-          "E47",
-          "E48",
-          "E49",
-          "E50",
-          "E51",
-          "E52",
-          "E53",
-          "E54",
-          "E55",
-          "E56",
           "E57",
           "E58",
           "E59",
-          "E60",
-          "E61"
+          "E60"
+        ]
+      },
+      {
+        "text": "The malware demonstrates persistence through autorun mechanisms and scheduled tasks.",
+        "evidence_ids": [
+          "E27",
+          "E28",
+          "E29",
+          "E30"
         ]
       }
     ],
     "iocs": [
       {
-        "text": "The sample communicates with several suspicious IPs and domains, indicating potential C2 server activity.",
+        "text": "SHA256 hash: 155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "text": "IP addresses: 184.29.233.231, 149.154.167.99, 208.91.112.55, 77.111.102.202, 62.60.226.185, 40.126.32.6",
         "evidence_ids": [
           "E3",
           "E4",
           "E5",
           "E6",
           "E7",
-          "E8",
+          "E8"
+        ]
+      },
+      {
+        "text": "Domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, aware-cr1.com, gulf.moneroocean.stream, telegram.me, steamcommunity.com, bdm.kencangsm188.top",
+        "evidence_ids": [
           "E9",
           "E10",
           "E11",
           "E12",
           "E13",
-          "E14",
-          "E15",
-          "E16",
-          "E17",
-          "E18",
-          "E19",
-          "E20",
-          "E21",
-          "E22",
-          "E23",
-          "E24",
-          "E25",
-          "E26",
-          "E27",
-          "E28",
-          "E29",
-          "E30",
-          "E31",
-          "E32",
-          "E33",
-          "E34",
-          "E35",
-          "E36",
-          "E37",
-          "E38",
-          "E39",
-          "E40",
-          "E41",
-          "E42",
-          "E43",
-          "E44",
-          "E45",
-          "E46",
-          "E47",
-          "E48",
-          "E49",
-          "E50",
-          "E51",
-          "E52",
-          "E53",
-          "E54",
-          "E55",
-          "E56",
-          "E57",
-          "E58",
-          "E59",
-          "E60",
-          "E61"
+          "E14"
         ]
       }
     ],
     "likely_impact": [
       {
-        "text": "The impact of this malware can be significant, leading to unauthorized access, data theft, and potential financial losses due to mining operations.",
+        "text": "The malware could potentially cause significant damage to the infected systems, including data theft, unauthorized access, and resource consumption.",
         "evidence_ids": []
       }
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement strict network segmentation and monitoring to detect and block suspicious outbound traffic.",
+        "text": "Implement strict network segmentation and monitoring to detect and block suspicious outbound connections.",
         "evidence_ids": []
       },
       {
-        "text": "Use endpoint protection solutions that include behavioral analysis and sandboxing capabilities to detect and isolate suspicious files.",
+        "text": "Use endpoint protection solutions that can detect and block the identified malware families.",
+        "evidence_ids": []
+      },
+      {
+        "text": "Educate users about the risks of downloading and executing unknown files.",
         "evidence_ids": []
       }
     ]
   },
   "grounding": {
-    "statements": 11,
-    "grounded": 8,
-    "flagged": 3,
+    "statements": 16,
+    "grounded": 12,
+    "flagged": 4,
     "ungrounded": 0,
-    "grounded_pct": 72.7,
-    "flagged_pct": 27.3,
+    "grounded_pct": 75.0,
+    "flagged_pct": 25.0,
     "ungrounded_pct": 0.0
   }
 }

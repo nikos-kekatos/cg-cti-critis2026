@@ -305,164 +305,152 @@
   "egmir": {
     "executive_summary": [
       {
-        "text": "The sample is identified as a crypto mining malware family. It exhibits several stealth and anti-analysis techniques, including contacting known malicious IPs and domains, unhooking from sandbox environments, and using persistence mechanisms.",
+        "text": "The sample exhibits behaviors consistent with a cryptocurrency mining operation, including contacting known mining domains and employing anti-sandbox evasion techniques.",
         "evidence_ids": [
-          "E2",
-          "E3",
-          "E4",
-          "E5",
-          "E6",
-          "E7",
-          "E8",
-          "E9",
-          "E10",
-          "E11",
-          "E12",
-          "E13",
-          "E14",
-          "E15",
-          "E16",
-          "E17",
-          "E18",
-          "E19",
-          "E20",
-          "E21",
-          "E22",
-          "E23",
-          "E24",
-          "E25",
-          "E26",
-          "E27",
-          "E28",
-          "E29",
-          "E30",
-          "E31",
-          "E32",
-          "E33",
-          "E34",
-          "E35",
-          "E36",
-          "E37",
-          "E38",
-          "E39",
-          "E40",
-          "E41",
-          "E42"
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
         ]
       }
     ],
     "observed_behaviours": [
       {
-        "text": "The malware contacts multiple IP addresses and resolves several domains, some of which are associated with cryptocurrency mining pools.",
+        "text": "The sample contacts multiple IPs and resolves several domains associated with cryptocurrency mining operations.",
         "evidence_ids": [
-          "E3",
-          "E4",
-          "E5",
-          "E6",
-          "E7",
-          "E8",
-          "E9",
-          "E10",
-          "E11",
-          "E12",
-          "E13"
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
         ]
       }
     ],
     "attack_techniques": [
       {
-        "text": "The malware employs various stealth techniques such as hiding its network activity and window presence.",
+        "text": "The sample employs various anti-sandbox evasion techniques and persistence mechanisms.",
         "evidence_ids": [
-          "E14",
-          "E27",
-          "E33"
-        ]
-      },
-      {
-        "text": "It also uses anti-sandboxing techniques to detect and evade analysis environments.",
-        "evidence_ids": [
-          "E15",
-          "E16",
-          "E39"
-        ]
-      },
-      {
-        "text": "Persistence mechanisms are used to ensure the malware runs automatically on system startup.",
-        "evidence_ids": [
-          "E18",
-          "E19",
-          "E20",
-          "E21",
-          "E40",
-          "E41"
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
         ]
       }
     ],
     "iocs": [
       {
-        "text": "SHA256 hash: 52f447218c94376f552d1c2b5bfa01c4ef2b5d32ac9ac061236cd286a9efba67",
+        "text": "IP addresses: 208.91.112.55, 104.18.21.213, 2.19.193.24, 104.18.24.75, 40.126.32.6",
         "evidence_ids": [
-          "E1"
+          3,
+          4,
+          5,
+          6,
+          7
         ]
       },
       {
-        "text": "Contacted IPs: 208.91.112.55, 104.18.21.213, 2.19.193.24, 104.18.24.75, 40.126.32.6",
+        "text": "Domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, polygon.lava.build, x2.c.lencr.org, ye.c.lencr.org, ye1.c.lencr.org, pool.supportxmr.com",
         "evidence_ids": [
-          "E3",
-          "E4",
-          "E5",
-          "E6",
-          "E7"
-        ]
-      },
-      {
-        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, polygon.lava.build, x2.c.lencr.org, ye.c.lencr.org, ye1.c.lencr.org, pool.supportxmr.com",
-        "evidence_ids": [
-          "E8",
-          "E9",
-          "E10",
-          "E11",
-          "E12",
-          "E13"
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
         ]
       }
     ],
     "likely_impact": [
       {
-        "text": "The malware is likely to cause resource consumption issues due to its crypto mining activities, potentially leading to performance degradation and increased electricity costs.",
+        "text": "The impact includes resource consumption for mining activities and potential data exfiltration through network communications.",
         "evidence_ids": []
       }
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement network monitoring to detect and block communication with known malicious IPs and domains.",
-        "evidence_ids": [
-          "E3",
-          "E4",
-          "E5",
-          "E6",
-          "E7",
-          "E8",
-          "E9",
-          "E10",
-          "E11",
-          "E12",
-          "E13"
-        ]
-      },
-      {
-        "text": "Use endpoint protection solutions that can detect and block the execution of this type of malware.",
+        "text": "Implement network monitoring and filtering to block communication with known malicious IPs and domains. Use endpoint detection and response tools to identify and isolate infected systems.",
         "evidence_ids": []
       }
     ]
   },
   "grounding": {
-    "statements": 11,
-    "grounded": 9,
+    "statements": 7,
+    "grounded": 0,
     "flagged": 2,
-    "ungrounded": 0,
-    "grounded_pct": 81.8,
-    "flagged_pct": 18.2,
-    "ungrounded_pct": 0.0
+    "ungrounded": 5,
+    "grounded_pct": 0.0,
+    "flagged_pct": 28.6,
+    "ungrounded_pct": 71.4
   }
 }

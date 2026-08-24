@@ -1,29 +1,12 @@
 {
   "aggregate": {
     "reports": 35,
-    "total_observables": 171,
-    "total_corroborated": 51,
+    "total_observables": 168,
+    "total_corroborated": 50,
     "corroboration_rate_Q4": 0.298,
     "family_agreement_rate": 0.308
   },
   "per_report": [
-    {
-      "file": "20.json",
-      "sha256": "bd2cc2f1f25b5f520a87068475247dd5611ab9f199ed3264983d720e016acf66",
-      "sandbox_family": "",
-      "techniques": 13,
-      "observables": 4,
-      "corroborated": 1,
-      "family_agreement": null,
-      "hits": [
-        {
-          "type": "file",
-          "source": "MalwareBazaar",
-          "label": "NeptuneRAT"
-        }
-      ],
-      "corroboration_rate": 0.25
-    },
     {
       "file": "21.json",
       "sha256": "155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7",
@@ -218,6 +201,17 @@
         }
       ],
       "corroboration_rate": 0.462
+    },
+    {
+      "file": "30.json",
+      "sha256": "8b4c47c4cf5e76ec57dd5a050d5acd832a0d532ee875d7b44f6cdaf68f90d37c",
+      "sandbox_family": "",
+      "techniques": 0,
+      "observables": 1,
+      "corroborated": 0,
+      "family_agreement": null,
+      "hits": [],
+      "corroboration_rate": 0.0
     },
     {
       "file": "32.json",

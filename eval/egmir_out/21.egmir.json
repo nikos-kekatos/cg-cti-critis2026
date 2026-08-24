@@ -308,16 +308,17 @@
     ],
     "observed_behaviours": [
       {
-        "text": "The sample contacts several IPs and resolves a domain name, indicating potential command and control (C&C) communication.",
+        "text": "The malware contacts several IPs and resolves a suspicious domain name, indicating command and control (C2) communication.",
         "evidence_ids": [
           "E3",
           "E4",
           "E5",
-          "E6"
+          "E6",
+          "E42"
         ]
       },
       {
-        "text": "The sample employs various anti-analysis techniques such as anti-debugging, anti-sandboxing, and anti-VM detection.",
+        "text": "It employs various anti-analysis techniques such as anti-debugging, anti-sandboxing, and anti-VM detection.",
         "evidence_ids": [
           "E7",
           "E8",
@@ -325,70 +326,66 @@
           "E10",
           "E11",
           "E29",
-          "E30",
-          "E31",
-          "E32",
+          "E30"
+        ]
+      },
+      {
+        "text": "The malware also shows persistence mechanisms and process enumeration capabilities.",
+        "evidence_ids": [
+          "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E19",
           "E33",
           "E34",
           "E35",
           "E36",
           "E37",
-          "E38",
-          "E39",
-          "E40",
-          "E41",
-          "E42"
+          "E38"
         ]
       }
     ],
     "attack_techniques": [
       {
-        "text": "The sample uses dead connect technique to avoid detection.",
+        "text": "The sample uses T1106 (Anti-Debug Guard Pages) to prevent debugging.",
         "evidence_ids": [
-          "E12",
-          "E26"
+          "E7"
         ]
       },
       {
-        "text": "The sample steals cookies using infostealer technique.",
+        "text": "It also uses T1562 (Anti-Sandbox Unhook) to detect and evade sandbox environments.",
         "evidence_ids": [
-          "E13"
+          "E8",
+          "E9"
         ]
       },
       {
-        "text": "The sample creates suspended processes and manipulates threads in other processes.",
+        "text": "The malware performs reconnaissance on the system using techniques like T1082 (Anti-VM Display) and T1012 (Reconnaissance Program).",
         "evidence_ids": [
-          "E14",
-          "E15",
-          "E16",
-          "E33",
-          "E34",
-          "E35",
-          "E36"
-        ]
-      },
-      {
-        "text": "The sample enumerates running processes and queries system information.",
-        "evidence_ids": [
-          "E17",
+          "E10",
           "E18",
-          "E19",
-          "E27",
-          "E28",
-          "E37",
-          "E38"
+          "E19"
+        ]
+      },
+      {
+        "text": "It employs stealth techniques such as T1564 (Stealth Window) to hide its presence.",
+        "evidence_ids": [
+          "E20",
+          "E21"
+        ]
+      },
+      {
+        "text": "The malware uses suspicious IoControl codes (T1542.003) to perform unusual operations.",
+        "evidence_ids": [
+          "E11"
         ]
       }
     ],
     "iocs": [
       {
-        "text": "SHA256 hash of the sample: 155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7",
-        "evidence_ids": [
-          "E1"
-        ]
-      },
-      {
-        "text": "IP addresses contacted: 62.60.226.185, 77.111.102.206, 40.126.32.66",
+        "text": "IP addresses: 62.60.226.185, 77.111.102.206, 40.126.32.66",
         "evidence_ids": [
           "E3",
           "E4",
@@ -396,9 +393,15 @@
         ]
       },
       {
-        "text": "Domain name resolved: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+        "text": "Domain name: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
         "evidence_ids": [
           "E6"
+        ]
+      },
+      {
+        "text": "SHA256 hash: 155d1dce8e17b107b531b80b648f1a3fcbcbed764d76a39b0b3972d9424dd2f7",
+        "evidence_ids": [
+          "E1"
         ]
       }
     ],
@@ -424,12 +427,12 @@
     ]
   },
   "grounding": {
-    "statements": 15,
-    "grounded": 9,
+    "statements": 17,
+    "grounded": 11,
     "flagged": 6,
     "ungrounded": 0,
-    "grounded_pct": 60.0,
-    "flagged_pct": 40.0,
+    "grounded_pct": 64.7,
+    "flagged_pct": 35.3,
     "ungrounded_pct": 0.0
   }
 }

@@ -338,7 +338,7 @@
     ],
     "observed_behaviours": [
       {
-        "text": "The malware contacts several IPs and resolves multiple domains, including those related to cryptocurrency mining pools.",
+        "text": "The malware contacts multiple IPs and resolves several domains, including those associated with cryptocurrency mining pools.",
         "evidence_ids": [
           "E3",
           "E4",
@@ -353,24 +353,22 @@
           "E13",
           "E15"
         ]
-      }
-    ],
-    "attack_techniques": [
+      },
       {
-        "text": "The sample uses techniques such as stealth_network, cryptopool_domains, and persistence_autorun to evade detection and maintain persistence.",
+        "text": "It exhibits behaviors indicative of anti-sandboxing mechanisms and persistence techniques.",
         "evidence_ids": [
-          "E16",
-          "E19",
+          "E17",
+          "E18",
           "E20",
           "E21",
           "E22",
+          "E23",
           "E24",
           "E25",
-          "E26",
-          "E27",
           "E28",
-          "E30",
+          "E31",
           "E32",
+          "E33",
           "E34",
           "E35",
           "E36",
@@ -381,20 +379,43 @@
           "E41",
           "E42",
           "E43",
-          "E44",
-          "E45"
+          "E44"
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "The malware utilizes stealth techniques such as network obfuscation and window hiding.",
+        "evidence_ids": [
+          "E16",
+          "E18",
+          "E24",
+          "E25",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36"
+        ]
+      },
+      {
+        "text": "It also employs persistence methods like autorun and task scheduling.",
+        "evidence_ids": [
+          "E20",
+          "E21",
+          "E22",
+          "E23",
+          "E42",
+          "E43"
         ]
       }
     ],
     "iocs": [
       {
-        "text": "SHA256 hash of the sample: 86fe031101b19d7f9ca74392f638684715447baded94d81ef62799d0b72b4057",
-        "evidence_ids": [
-          "E1"
-        ]
-      },
-      {
-        "text": "Contacted IPs: 208.91.112.55, 104.18.20.213, 2.19.193.10, 104.18.25.75, 23.55.48.56, 40.126.32.131",
+        "text": "IP addresses: 208.91.112.55, 104.18.20.213, 2.19.193.10, 104.18.25.75, 23.55.48.56, 40.126.32.131",
         "evidence_ids": [
           "E3",
           "E4",
@@ -405,7 +426,7 @@
         ]
       },
       {
-        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, polygon.rpc.subquery.network, polygon.lava.build, x2.c.lencr.org, ye.c.lencr.org, ye1.c.lencr.org, pool.supportxmr.com",
+        "text": "Domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, polygon.rpc.subquery.network, polygon.lava.build, x2.c.lencr.org, ye.c.lencr.org, ye1.c.lencr.org, pool.supportxmr.com",
         "evidence_ids": [
           "E9",
           "E10",
@@ -414,28 +435,81 @@
           "E13",
           "E15"
         ]
+      },
+      {
+        "text": "SHA256 hash: 86fe031101b19d7f9ca74392f638684715447baded94d81ef62799d0b72b4057",
+        "evidence_ids": [
+          "E1"
+        ]
       }
     ],
     "likely_impact": [
       {
-        "text": "The impact includes resource consumption for mining activities, potential data exfiltration, and increased risk of system instability due to persistence mechanisms.",
-        "evidence_ids": []
+        "text": "The malware is likely to consume significant system resources for mining cryptocurrencies, potentially leading to performance degradation and increased electricity costs.",
+        "evidence_ids": [
+          "E2"
+        ]
       }
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement network monitoring and filtering to block communication with known malicious IPs and domains. Use endpoint protection solutions with up-to-date signatures and heuristics to detect and remove the malware.",
-        "evidence_ids": []
+        "text": "Implement network monitoring and intrusion detection systems to identify and block communication with known malicious IPs and domains.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10",
+          "E11",
+          "E12",
+          "E13",
+          "E15"
+        ]
+      },
+      {
+        "text": "Use endpoint protection solutions that can detect and remove the malware based on its behavioral characteristics and hashes.",
+        "evidence_ids": [
+          "E1",
+          "E2",
+          "E16",
+          "E18",
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E24",
+          "E25",
+          "E28",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39",
+          "E40",
+          "E41",
+          "E42",
+          "E43",
+          "E44"
+        ]
       }
     ]
   },
   "grounding": {
-    "statements": 8,
-    "grounded": 6,
-    "flagged": 2,
+    "statements": 11,
+    "grounded": 11,
+    "flagged": 0,
     "ungrounded": 0,
-    "grounded_pct": 75.0,
-    "flagged_pct": 25.0,
+    "grounded_pct": 100.0,
+    "flagged_pct": 0.0,
     "ungrounded_pct": 0.0
   }
 }

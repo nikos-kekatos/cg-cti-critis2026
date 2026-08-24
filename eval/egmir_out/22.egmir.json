@@ -277,7 +277,7 @@
   "egmir": {
     "executive_summary": [
       {
-        "text": "The sample exhibits characteristics of the AgentTesla infostealer malware family, including anti-analysis techniques and network communication behaviors.",
+        "text": "The sample exhibits characteristics of the AgentTesla infostealer malware family, including anti-analysis techniques and data exfiltration via HTTP requests.",
         "evidence_ids": [
           "E2",
           "E8",
@@ -317,53 +317,25 @@
     ],
     "observed_behaviours": [
       {
-        "text": "The malware attempts to evade analysis by using anti-debugging and anti-VM techniques such as guard pages and checking available memory.",
+        "text": "The malware contacts several IPs and resolves specific domains, indicating potential command and control (C2) communication.",
         "evidence_ids": [
-          "E8",
-          "E9",
-          "E28",
-          "E29"
-        ]
-      },
-      {
-        "text": "It communicates over HTTP with remote servers and uses ICMP packets for network communication.",
-        "evidence_ids": [
-          "E10",
-          "E12",
-          "E30",
-          "E36",
-          "E37"
-        ]
-      },
-      {
-        "text": "The malware collects information about the system, including computer name, user name, keyboard layout, and language settings.",
-        "evidence_ids": [
-          "E20",
-          "E21",
-          "E22",
-          "E23",
-          "E27"
-        ]
-      },
-      {
-        "text": "It establishes persistence mechanisms and performs process injection and manipulation.",
-        "evidence_ids": [
-          "E11",
-          "E13",
-          "E31",
-          "E32",
-          "E33",
-          "E34",
-          "E35"
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7"
         ]
       }
     ],
     "attack_techniques": [
       {
-        "text": "The malware employs various evasion techniques such as anti-debugging (T1106), anti-VM checks (T1082), and packer entropy analysis (T1027).",
+        "text": "The malware employs various anti-analysis techniques such as anti-debugging, anti-VM checks, and entropy-based packing.",
         "evidence_ids": [
           "E8",
           "E9",
+          "E10",
+          "E11",
+          "E12",
           "E13",
           "E14",
           "E15",
@@ -396,6 +368,12 @@
     ],
     "iocs": [
       {
+        "text": "SHA256 hash of the PE32 executable: 478a9a9ebc5993baaa14c360bd1f3a8269b92571abe6613de1f457dd448c76fa",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
         "text": "Contacted IPs: 77.111.102.202, 218.208.91.162, 40.126.32.6",
         "evidence_ids": [
           "E3",
@@ -413,9 +391,10 @@
     ],
     "likely_impact": [
       {
-        "text": "The malware is designed to steal sensitive information and establish persistence on the infected system.",
+        "text": "The malware is designed to steal information and potentially exfiltrate it through HTTP requests, posing a significant risk to data integrity and confidentiality.",
         "evidence_ids": [
           "E2",
+          "E10",
           "E15",
           "E16",
           "E17",
@@ -446,42 +425,18 @@
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement strict network segmentation and monitor outbound traffic for suspicious HTTP and ICMP requests.",
-        "evidence_ids": [
-          "E10",
-          "E12",
-          "E30",
-          "E36",
-          "E37"
-        ]
-      },
-      {
-        "text": "Use endpoint detection and response (EDR) tools to detect and respond to anti-analysis techniques and process injection activities.",
-        "evidence_ids": [
-          "E8",
-          "E9",
-          "E11",
-          "E13",
-          "E31",
-          "E32",
-          "E33",
-          "E34",
-          "E35"
-        ]
-      },
-      {
-        "text": "Regularly update and patch systems to mitigate known vulnerabilities exploited by the malware.",
+        "text": "Implement strict network segmentation and monitoring to detect and block suspicious C2 traffic. Use endpoint detection and response (EDR) tools to identify and isolate infected systems.",
         "evidence_ids": []
       }
     ]
   },
   "grounding": {
-    "statements": 12,
-    "grounded": 11,
+    "statements": 8,
+    "grounded": 7,
     "flagged": 1,
     "ungrounded": 0,
-    "grounded_pct": 91.7,
-    "flagged_pct": 8.3,
+    "grounded_pct": 87.5,
+    "flagged_pct": 12.5,
     "ungrounded_pct": 0.0
   }
 }

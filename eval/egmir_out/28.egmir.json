@@ -81,100 +81,98 @@
   "egmir": {
     "executive_summary": [
       {
-        "text": "The sample exhibits behaviors consistent with network stealth techniques and uses unknown PE section names, suggesting it may be packed or obfuscated.",
+        "text": "The sample exhibits stealthy network behavior and uses unknown PE section names, suggesting potential packing or obfuscation techniques.",
         "evidence_ids": [
-          "E6",
-          "E7",
-          "E8",
-          "E9",
-          "E10"
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
         ]
       }
     ],
     "observed_behaviours": [
       {
-        "text": "Contacts specific IPs and domains known for their use in cloud services and software distribution.",
+        "text": "Contacts Google and Microsoft domains, indicating possible communication with command and control servers.",
         "evidence_ids": [
-          "E2",
-          "E3",
-          "E4",
-          "E5"
+          2,
+          3,
+          4,
+          5
         ]
       }
     ],
     "attack_techniques": [
       {
-        "text": "Uses network stealth techniques to avoid detection.",
+        "text": "Uses stealthy network communication techniques to avoid detection.",
         "evidence_ids": [
-          "E6",
-          "E9"
+          6,
+          9
         ]
       },
       {
-        "text": "Utilizes unknown PE section names, indicating potential packing or obfuscation.",
+        "text": "Utilizes unknown PE section names, possibly to evade analysis tools.",
         "evidence_ids": [
-          "E7",
-          "E8",
-          "E10"
+          7,
+          8,
+          10
         ]
       }
     ],
     "iocs": [
       {
-        "text": "SHA256 hash of the sample: 029a364b81370e6f680886c2e1a0751cc45d1539db9ef0b9b55265def3422259",
+        "text": "SHA256 hash: 029a364b81370e6f680886c2e1a0751cc45d1539db9ef0b9b55265def3422259",
         "evidence_ids": [
-          "E1"
+          1
         ]
       },
       {
-        "text": "Contacted IPs: 142.250.181.142 and 40.126.32.66",
+        "text": "IP addresses: 142.250.181.142, 40.126.32.66",
         "evidence_ids": [
-          "E2",
-          "E3"
+          2,
+          3
         ]
       },
       {
-        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net and dl.google.com",
+        "text": "Domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, dl.google.com",
         "evidence_ids": [
-          "E4",
-          "E5"
+          4,
+          5
         ]
       }
     ],
     "likely_impact": [
       {
-        "text": "Potential data exfiltration or command and control communication due to network stealth behavior.",
+        "text": "Potential data exfiltration or command and control communication.",
         "evidence_ids": [
-          "E6",
-          "E9"
+          6,
+          9
         ]
       }
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement network monitoring and anomaly detection to identify unusual outbound traffic patterns.",
-        "evidence_ids": [
-          "E6",
-          "E9"
-        ]
+        "text": "Implement network monitoring and anomaly detection for suspicious outbound traffic.",
+        "evidence_ids": []
       },
       {
-        "text": "Use anti-malware solutions capable of unpacking and analyzing suspicious executables.",
+        "text": "Use advanced endpoint protection solutions that can detect and block unknown PE sections.",
         "evidence_ids": [
-          "E7",
-          "E8",
-          "E10"
+          7,
+          8,
+          10
         ]
       }
     ]
   },
   "grounding": {
     "statements": 10,
-    "grounded": 10,
-    "flagged": 0,
-    "ungrounded": 0,
-    "grounded_pct": 100.0,
-    "flagged_pct": 0.0,
-    "ungrounded_pct": 0.0
+    "grounded": 0,
+    "flagged": 1,
+    "ungrounded": 9,
+    "grounded_pct": 0.0,
+    "flagged_pct": 10.0,
+    "ungrounded_pct": 90.0
   }
 }

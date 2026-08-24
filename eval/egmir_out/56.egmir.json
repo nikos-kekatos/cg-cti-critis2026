@@ -347,7 +347,7 @@
   "egmir": {
     "executive_summary": [
       {
-        "text": "The sample exhibits behaviors consistent with the XWorm malware family, including persistence mechanisms, anti-analysis techniques, and data exfiltration.",
+        "text": "The sample exhibits behaviors consistent with the XWorm malware family, including persistence mechanisms, anti-analysis techniques, and data exfiltration attempts.",
         "evidence_ids": [
           "E2",
           "E15",
@@ -398,27 +398,16 @@
     ],
     "observed_behaviours": [
       {
-        "text": "The malware attempts to establish connections with external IPs and domains, indicating potential command and control communication or data exfiltration.",
+        "text": "The malware contacts several IPs and resolves a suspicious domain name, indicating potential command and control (C2) communication.",
         "evidence_ids": [
           "E3",
           "E4",
           "E5",
           "E6"
         ]
-      }
-    ],
-    "attack_techniques": [
-      {
-        "text": "The malware employs persistence techniques such as autorun entries to ensure execution on subsequent system startups.",
-        "evidence_ids": [
-          "E15",
-          "E16",
-          "E17",
-          "E18"
-        ]
       },
       {
-        "text": "It uses anti-analysis techniques like guard page manipulation and memory checks to evade analysis tools.",
+        "text": "The sample employs various anti-analysis techniques such as guard page manipulation and memory checks to evade detection.",
         "evidence_ids": [
           "E8",
           "E9",
@@ -427,6 +416,12 @@
           "E12",
           "E13",
           "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E19",
+          "E20",
           "E21",
           "E22",
           "E23",
@@ -459,21 +454,212 @@
         ]
       },
       {
-        "text": "The malware also engages in data exfiltration by stealing cookies and other sensitive information.",
+        "text": "It uses persistence mechanisms like autorun entries and scheduled tasks to ensure continued execution.",
         "evidence_ids": [
-          "E11"
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E26",
+          "E27",
+          "E28",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39",
+          "E40",
+          "E41",
+          "E42",
+          "E43",
+          "E44",
+          "E45",
+          "E46",
+          "E47",
+          "E48",
+          "E49"
+        ]
+      },
+      {
+        "text": "The malware also attempts to steal sensitive information such as cookies and system details.",
+        "evidence_ids": [
+          "E11",
+          "E12",
+          "E13",
+          "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E23",
+          "E24",
+          "E25",
+          "E26",
+          "E27",
+          "E28",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39",
+          "E40",
+          "E41",
+          "E42",
+          "E43",
+          "E44",
+          "E45",
+          "E46",
+          "E47",
+          "E48",
+          "E49"
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "The malware utilizes persistence techniques such as autorun entries and scheduled tasks to maintain access.",
+        "evidence_ids": [
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E26",
+          "E27",
+          "E28",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39",
+          "E40",
+          "E41",
+          "E42",
+          "E43",
+          "E44",
+          "E45",
+          "E46",
+          "E47",
+          "E48",
+          "E49"
+        ]
+      },
+      {
+        "text": "It employs anti-analysis techniques such as guard page manipulation and memory checks to evade detection.",
+        "evidence_ids": [
+          "E8",
+          "E9",
+          "E10",
+          "E11",
+          "E12",
+          "E13",
+          "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E23",
+          "E24",
+          "E25",
+          "E26",
+          "E27",
+          "E28",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39",
+          "E40",
+          "E41",
+          "E42",
+          "E43",
+          "E44",
+          "E45",
+          "E46",
+          "E47",
+          "E48",
+          "E49"
+        ]
+      },
+      {
+        "text": "The malware attempts to steal sensitive information using infostealer techniques.",
+        "evidence_ids": [
+          "E11",
+          "E12",
+          "E13",
+          "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E19",
+          "E20",
+          "E21",
+          "E22",
+          "E23",
+          "E24",
+          "E25",
+          "E26",
+          "E27",
+          "E28",
+          "E29",
+          "E30",
+          "E31",
+          "E32",
+          "E33",
+          "E34",
+          "E35",
+          "E36",
+          "E37",
+          "E38",
+          "E39",
+          "E40",
+          "E41",
+          "E42",
+          "E43",
+          "E44",
+          "E45",
+          "E46",
+          "E47",
+          "E48",
+          "E49"
         ]
       }
     ],
     "iocs": [
       {
-        "text": "SHA256: fe1e3f38e6bd2ec3cfcacc946a22c8d8212f083c8165cb3caa9ae301c25332ff",
-        "evidence_ids": [
-          "E1"
-        ]
-      },
-      {
-        "text": "IP Addresses: 109.248.150.244, 77.111.102.203, 40.126.32.6",
+        "text": "IP addresses contacted by the malware: 109.248.150.244, 77.111.102.203, 40.126.32.6",
         "evidence_ids": [
           "E3",
           "E4",
@@ -481,7 +667,7 @@
         ]
       },
       {
-        "text": "Domain: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
+        "text": "Domain name resolved by the malware: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net",
         "evidence_ids": [
           "E6"
         ]
@@ -489,36 +675,18 @@
     ],
     "likely_impact": [
       {
-        "text": "The malware could potentially cause data loss or theft due to its persistence and data exfiltration capabilities.",
+        "text": "The malware could cause significant damage through data theft, persistence, and evasion techniques, leading to unauthorized access and potential financial loss.",
         "evidence_ids": [
-          "E15",
-          "E16",
-          "E17",
-          "E18",
-          "E11"
-        ]
-      }
-    ],
-    "recommended_mitigations": [
-      {
-        "text": "Implement strict network access controls and monitor outbound traffic for suspicious connections.",
-        "evidence_ids": [
-          "E3",
-          "E4",
-          "E5",
-          "E6"
-        ]
-      },
-      {
-        "text": "Use endpoint detection and response (EDR) solutions to detect and respond to anti-analysis techniques.",
-        "evidence_ids": [
-          "E8",
-          "E9",
-          "E10",
           "E11",
           "E12",
           "E13",
           "E14",
+          "E15",
+          "E16",
+          "E17",
+          "E18",
+          "E19",
+          "E20",
           "E21",
           "E22",
           "E23",
@@ -549,20 +717,30 @@
           "E48",
           "E49"
         ]
+      }
+    ],
+    "recommended_mitigations": [
+      {
+        "text": "Implement robust endpoint protection solutions with advanced behavioral analysis capabilities.",
+        "evidence_ids": []
       },
       {
-        "text": "Regularly update and patch systems to mitigate known vulnerabilities exploited by the malware.",
+        "text": "Regularly update security policies and configurations to counteract new evasion techniques.",
+        "evidence_ids": []
+      },
+      {
+        "text": "Monitor network traffic for unusual outbound connections and implement strict egress filtering.",
         "evidence_ids": []
       }
     ]
   },
   "grounding": {
-    "statements": 12,
+    "statements": 14,
     "grounded": 11,
-    "flagged": 1,
+    "flagged": 3,
     "ungrounded": 0,
-    "grounded_pct": 91.7,
-    "flagged_pct": 8.3,
+    "grounded_pct": 78.6,
+    "flagged_pct": 21.4,
     "ungrounded_pct": 0.0
   }
 }

@@ -277,7 +277,7 @@
   "egmir": {
     "executive_summary": [
       {
-        "text": "The sample exhibits multiple malicious behaviors including anti-VM checks, persistence mechanisms, and stealth techniques. It also attempts to delete executed files and communicates with suspicious domains.",
+        "text": "The analyzed sample exhibits multiple malicious behaviors and techniques, including anti-VM checks, persistence mechanisms, and stealth techniques.",
         "evidence_ids": [
           14,
           15,
@@ -317,85 +317,23 @@
         ]
       },
       {
-        "text": "It also queries the computer name and user name.",
+        "text": "It also queries the computer name and user name, indicating potential reconnaissance activities.",
         "evidence_ids": [
           25,
           26
         ]
       },
       {
-        "text": "The sample employs stealth techniques such as setting an unhandled exception filter and checking for debugging.",
-        "evidence_ids": [
-          28
-        ]
-      },
-      {
-        "text": "It uses language checks via the registry.",
-        "evidence_ids": [
-          29
-        ]
-      },
-      {
-        "text": "The sample reads its own file and attempts to terminate remote processes.",
-        "evidence_ids": [
-          30,
-          32
-        ]
-      },
-      {
-        "text": "It contains unknown PE section names and high entropy, suggesting the use of a packer.",
-        "evidence_ids": [
-          33,
-          34
-        ]
-      },
-      {
-        "text": "The sample communicates with suspicious top-level domains and creates scheduled tasks using Windows utilities.",
-        "evidence_ids": [
-          35,
-          36
-        ]
-      },
-      {
-        "text": "Persistence is achieved through autorun mechanisms.",
-        "evidence_ids": [
-          37,
-          38
-        ]
-      },
-      {
-        "text": "The sample attempts to delete executed files.",
-        "evidence_ids": [
-          39
-        ]
-      }
-    ],
-    "attack_techniques": [
-      {
-        "text": "The sample uses anti-VM checks (T1082).",
-        "evidence_ids": [
-          14
-        ]
-      },
-      {
-        "text": "It performs dead connect (T1071).",
-        "evidence_ids": [
-          15,
-          27
-        ]
-      },
-      {
-        "text": "Persistence is achieved through autorun mechanisms (T1547, T1112).",
+        "text": "The malware establishes persistence through autorun mechanisms.",
         "evidence_ids": [
           16,
           17,
           18,
-          37,
-          38
+          37
         ]
       },
       {
-        "text": "Stealth techniques are employed (T1564).",
+        "text": "It employs stealth techniques such as creating non-standard window names.",
         "evidence_ids": [
           19,
           20,
@@ -403,35 +341,67 @@
         ]
       },
       {
-        "text": "The sample uses unknown PE section names (T1027).",
+        "text": "The sample contains unknown PE section names, suggesting the presence of a packer.",
         "evidence_ids": [
           21,
           22,
           33
         ]
+      },
+      {
+        "text": "It terminates remote processes, which could be used to evade detection or disrupt security measures.",
+        "evidence_ids": [
+          32
+        ]
+      }
+    ],
+    "attack_techniques": [
+      {
+        "text": "The malware uses dead connect techniques to avoid detection.",
+        "evidence_ids": [
+          15,
+          27
+        ]
+      },
+      {
+        "text": "It sets up persistence mechanisms using scheduled tasks.",
+        "evidence_ids": [
+          16,
+          17,
+          18,
+          36,
+          37
+        ]
+      },
+      {
+        "text": "The sample includes anti-debugging techniques.",
+        "evidence_ids": [
+          28
+        ]
+      },
+      {
+        "text": "Language check registry is performed, possibly to determine the system's language.",
+        "evidence_ids": [
+          29
+        ]
+      },
+      {
+        "text": "The malware reads its own file, which can be indicative of self-checking behavior.",
+        "evidence_ids": [
+          30
+        ]
       }
     ],
     "iocs": [
       {
-        "text": "SHA256 hash: 89de93e69e898d5da92c572f472fc8d0b3b1162eb8d98d4790d2fd6ff849de5b",
-        "evidence_ids": [
-          1
-        ]
-      },
-      {
-        "text": "Contacted IPs: 2.18.69.175, 2.18.69.115, 184.29.233.231, 149.154.167.99, 208.91.112.55, 40.126.32.66",
+        "text": "The sample contacts several IPs and domains, including known malicious ones like 'sup.808skor.org' and 'sup.merahsm188.top'.",
         "evidence_ids": [
           2,
           3,
           4,
           5,
           6,
-          7
-        ]
-      },
-      {
-        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, aware-cr1.com, t.me, sup.808skor.org, sup.merahsm188.top, steamcommunity.com",
-        "evidence_ids": [
+          7,
           8,
           9,
           10,
@@ -443,32 +413,35 @@
     ],
     "likely_impact": [
       {
-        "text": "The malware could potentially cause data loss or unauthorized access due to its persistence and stealth techniques.",
-        "evidence_ids": []
+        "text": "The malware could potentially cause disruption by terminating processes and establishing persistence on the infected system.",
+        "evidence_ids": [
+          32,
+          37
+        ]
       }
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement strict network segmentation and monitor outbound connections to suspicious IPs and domains.",
+        "text": "Implement strict network segmentation and monitor outbound connections to detect and block communication with suspicious IPs and domains.",
         "evidence_ids": []
       },
       {
-        "text": "Use endpoint detection and response (EDR) tools to detect and respond to stealthy behavior.",
+        "text": "Use endpoint protection solutions that can detect and block the execution of suspicious binaries and persistence mechanisms.",
         "evidence_ids": []
       },
       {
-        "text": "Ensure regular patching and updating of systems to mitigate known vulnerabilities exploited by the malware.",
+        "text": "Educate users about the risks associated with downloading and executing unknown software.",
         "evidence_ids": []
       }
     ]
   },
   "grounding": {
-    "statements": 22,
+    "statements": 17,
     "grounded": 0,
-    "flagged": 4,
-    "ungrounded": 18,
+    "flagged": 3,
+    "ungrounded": 14,
     "grounded_pct": 0.0,
-    "flagged_pct": 18.2,
-    "ungrounded_pct": 81.8
+    "flagged_pct": 17.6,
+    "ungrounded_pct": 82.4
   }
 }

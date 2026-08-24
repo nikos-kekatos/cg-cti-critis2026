@@ -147,7 +147,7 @@
     ],
     "observed_behaviours": [
       {
-        "text": "The malware attempts to contact multiple IPs and domains, indicating potential C&C server communication.",
+        "text": "Contacts known malicious IPs and domains.",
         "evidence_ids": [
           "E3",
           "E4",
@@ -157,24 +157,35 @@
         ]
       },
       {
-        "text": "It uses techniques such as dead connect and dynamic DNS to evade detection.",
+        "text": "Queries the username of the system.",
         "evidence_ids": [
-          "E8",
-          "E9"
+          "E11"
+        ]
+      },
+      {
+        "text": "Uses anti-analysis techniques such as setting unhandled exception filters.",
+        "evidence_ids": [
+          "E13"
         ]
       }
     ],
     "attack_techniques": [
       {
-        "text": "Uses dead connect technique (T1071) to establish covert communication channels.",
+        "text": "Employs dead connect technique (T1071).",
         "evidence_ids": [
           "E8"
         ]
       },
       {
-        "text": "Employs dynamic DNS (T1568) for C&C server communication.",
+        "text": "Uses dynamic DNS (T1568).",
         "evidence_ids": [
           "E9"
+        ]
+      },
+      {
+        "text": "Utilizes ICMP for communication (T1095).",
+        "evidence_ids": [
+          "E10"
         ]
       }
     ],
@@ -186,7 +197,7 @@
         ]
       },
       {
-        "text": "Contacted IPs: 194.36.32.204, 208.91.112.55, 40.126.32.66",
+        "text": "IPs: 194.36.32.204, 208.91.112.55, 40.126.32.66",
         "evidence_ids": [
           "E3",
           "E4",
@@ -194,7 +205,7 @@
         ]
       },
       {
-        "text": "Resolved domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, papilawdns.duckdns.org",
+        "text": "Domains: -keyid-8bbf4b3340b0fcc1ec3c45c5c1cae57bf4ac1b85.microsoftaik.azure.net, papilawdns.duckdns.org",
         "evidence_ids": [
           "E6",
           "E7"
@@ -203,12 +214,11 @@
     ],
     "likely_impact": [
       {
-        "text": "The malware may attempt to gather user information and establish persistent connections to C&C servers.",
+        "text": "Potential data exfiltration and unauthorized access.",
         "evidence_ids": [
-          "E11",
           "E14",
+          "E15",
           "E16",
-          "E17",
           "E18",
           "E19"
         ]
@@ -216,25 +226,22 @@
     ],
     "recommended_mitigations": [
       {
-        "text": "Implement network monitoring and intrusion detection systems to detect and block suspicious traffic patterns.",
+        "text": "Implement network monitoring and intrusion detection systems to detect and block suspicious traffic.",
         "evidence_ids": []
       },
       {
-        "text": "Use endpoint protection solutions that can identify and block known malicious binaries.",
-        "evidence_ids": [
-          "E1",
-          "E17"
-        ]
+        "text": "Use endpoint protection solutions with up-to-date signatures and heuristics to detect and remove the malware.",
+        "evidence_ids": []
       }
     ]
   },
   "grounding": {
-    "statements": 12,
-    "grounded": 9,
-    "flagged": 3,
+    "statements": 14,
+    "grounded": 10,
+    "flagged": 4,
     "ungrounded": 0,
-    "grounded_pct": 75.0,
-    "flagged_pct": 25.0,
+    "grounded_pct": 71.4,
+    "flagged_pct": 28.6,
     "ungrounded_pct": 0.0
   }
 }
