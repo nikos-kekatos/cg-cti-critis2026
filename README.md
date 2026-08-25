@@ -133,6 +133,55 @@ paper/paper.pdf       camera-ready
 
 ---
 
+## STIX modelling
+
+Only standard STIX 2.1 types are used. There are **no custom (`x_`) properties and no
+extension-definition**; `allow_custom=True` is passed to the `stix2` constructors but no
+custom property is ever supplied.
+
+| kind | types |
+|---|---|
+| Cyber-observable (SCO) | `File`, `IPv4Address`, `DomainName`, `URL`, `NetworkTraffic` |
+| Domain (SDO) | `Malware`, `Indicator`, `ObservedData`, `AttackPattern`, `Vulnerability`, `Identity` |
+| Relationship (SRO) | `Relationship`, `Sighting` |
+| container | `Bundle`, `ExternalReference` |
+
+**Confidence is carried only where STIX 2.1 permits it** — on `Indicator`, `ObservedData`,
+`AttackPattern` and `Vulnerability`. No Cyber-observable Object is given a `confidence`
+property, because the specification does not define one for SCOs.
+
+### Relationships
+
+| relationship | source → target | emitted by |
+|---|---|---|
+| `drops` | `Malware` → `File` | sandbox |
+| `uses` | `Malware` → `AttackPattern` | sandbox |
+| `communicates-with` | `Malware` → `IPv4Address` / `DomainName` / `URL` | sandbox |
+| `indicates` | `Indicator` → object | detection and assessment tiers |
+
+### Types per connector
+
+The tiers need different amounts of the vocabulary: detonation yields a *subject*, the
+artefacts it touched and the techniques it exhibited, so the sandbox connector emits the
+full set; a rule firing has no subject to attribute behaviour to, so the others are
+`Indicator`-centred.
+
+| connector | types built |
+|---|---|
+| CAPE (malware) | `Malware`, `File`, `IPv4Address`, `DomainName`, `URL`, `NetworkTraffic`, `AttackPattern` |
+| Suricata (network IDS) | `Indicator`, `DomainName`, `IPv4Address`, `URL`, `NetworkTraffic`, `AttackPattern` |
+| Wazuh (host IDS) | `Indicator`, `ObservedData`, `IPv4Address`, `NetworkTraffic`, `AttackPattern` |
+| Nmap | `Indicator`, `IPv4Address`, `NetworkTraffic` |
+| ZAP (web) | `Indicator`, `Vulnerability`, `URL`, `AttackPattern` |
+| Semgrep (code) | `Indicator`, `AttackPattern` |
+| OSV (dependencies) | `Indicator` |
+
+> **Known inconsistency.** OSV models a dependency CVE as an `Indicator`, while ZAP models a
+> web finding as a `Vulnerability`. A CVE is more properly a `Vulnerability` SDO, and
+> modelling it as an `Indicator` means it will not deduplicate against CVE data already in
+> OpenCTI. This affects no reported result — the evaluation is entirely malware-path — but it
+> should be reconciled before the assessment tier is evaluated.
+
 ## Scope and limits
 
 The paper is explicit, and so is this repo:
