@@ -1,0 +1,108 @@
+\documentclass[border=6pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning,fit,backgrounds,calc,arrows.meta}
+\begin{document}
+\definecolor{navy}{RGB}{31,41,55}
+\definecolor{headerbg}{RGB}{234,237,241}
+\definecolor{accent}{RGB}{37,99,235}
+\definecolor{appbg}{RGB}{245,246,248}
+\definecolor{cardbd}{RGB}{221,224,230}
+\definecolor{ink}{RGB}{31,41,55}
+\definecolor{muted}{RGB}{120,130,145}
+\definecolor{green}{RGB}{22,143,74}
+\definecolor{greent}{RGB}{222,242,229}
+\definecolor{amber}{RGB}{176,124,20}
+\definecolor{ambert}{RGB}{250,240,213}
+\definecolor{grayt}{RGB}{235,237,240}
+\begin{tikzpicture}[font=\fontfamily{phv}\selectfont, x=1cm, y=1cm]
+% ---- window, header, sidebar ----
+\fill[appbg] (0,0) rectangle (16,9);
+\fill[headerbg] (0,8.05) rectangle (16,9);
+\fill[black!14] (0,8.02) rectangle (16,8.05);              % header hairline shadow
+\fill[white] (0,0) rectangle (3.15,8.02);                  % sidebar
+\fill[cardbd] (3.13,0) rectangle (3.15,8.02);              % sidebar divider
+\draw[cardbd, line width=0.7pt] (0,0) rectangle (16,9);    % window border
+% ---- header: brand (left) ----
+% the official CYBERGUARD wordmark, on the light grey header bar
+\node[anchor=west] at (0.30,8.55) {\includegraphics[height=0.42cm]{cyberguard_logo.png}};
+\draw[cardbd, line width=0.5pt] (2.60,8.30) -- (2.60,8.80);
+\node[anchor=west, text=ink, font=\scriptsize] at (2.76,8.55) {Threat Intelligence Console};
+% ---- header: user login (right) ----
+\draw[cardbd, line width=0.5pt] (13.60,8.28) -- (13.60,8.82);
+\node[anchor=west, text=muted, font=\tiny] at (13.76,8.55) {Last sync 12:04};
+% ---- sidebar nav (active: Overview) ----
+\fill[accent!9, rounded corners=1pt] (0.10,7.30) rectangle (3.02,7.78);
+\fill[accent] (0.10,7.30) rectangle (0.17,7.78);
+\foreach \y/\ic/\tc/\wt/\lab in {%
+  7.54/accent/accent/\bfseries/Overview,
+  7.00/black!22/ink/\mdseries/Malware,
+  6.46/black!22/ink/\mdseries/SIEM \& IDS,
+  5.92/black!22/ink/\mdseries/Scanners,
+  5.38/black!22/ink/\mdseries/ATT\&CK,
+  4.84/black!22/ink/\mdseries/Sharing}{
+  \fill[\ic, rounded corners=1.5pt] (0.30,\y-0.10) rectangle (0.52,\y+0.10);
+  \node[anchor=west, text=\tc, font=\scriptsize\wt] at (0.66,\y) {\lab};
+}
+% ---- main: title + period ----
+\node[anchor=west, text=ink, font=\bfseries] at (3.45,7.62) {Security overview};
+\draw[fill=white, draw=cardbd, line width=0.5pt, rounded corners=3pt] (14.52,7.44) rectangle (15.70,7.78);
+\node[text=muted, font=\tiny] at (15.11,7.61) {Last 24\,h};
+% ---- KPI cards ----
+\foreach \x/\lab/\val/\vc/\dc in {%
+  3.45/STIX OBJECTS/489/ink/muted,
+  6.53/CORROBORATED/48/green/green,
+  9.61/ATT\&CK/39/ink/accent,
+  12.69/SAMPLES/35/ink/muted}{
+  \draw[fill=white, draw=cardbd, line width=0.5pt, rounded corners=3pt] (\x,6.25) rectangle (\x+2.95,7.20);
+  \node[anchor=west, text=muted, font=\tiny] at (\x+0.20,6.98) {\lab};
+  \node[anchor=west, text=\vc, font=\large\bfseries] at (\x+0.20,6.52) {\val};
+  \fill[\dc] (\x+2.70,6.98) circle (0.07);
+}
+\fill[greent, rounded corners=2pt] (7.92,6.35) rectangle (9.40,6.66);
+\node[text=green, font=\tiny] at (8.66,6.505) {enforce-eligible};
+% ---- left panel: malware families ----
+\draw[fill=white, draw=cardbd, line width=0.5pt, rounded corners=3pt] (3.45,0.45) rectangle (9.45,6.00);
+\node[anchor=west, text=ink, font=\scriptsize\bfseries] at (3.65,5.66) {Malware families};
+\node[anchor=east, text=muted, font=\tiny] at (9.26,5.66) {35 samples};
+\fill[cardbd] (3.60,5.44) rectangle (9.30,5.455);
+\foreach \y/\fam/\tc/\tint/\dc/\tx/\lab in {%
+  5.14/njRAT/15/greent/green/green/corroborated,
+  4.56/AgentTesla/4/greent/green/green/corroborated,
+  3.98/RemcosRAT/3/ambert/amber/amber/attested,
+  3.40/AsyncRAT/10/ambert/amber/amber/attested,
+  2.82/WannaCry/1/grayt/muted/muted/observed,
+  2.24/CoinMiner/5/grayt/muted/muted/observed,
+  1.66/Formbook/3/grayt/muted/muted/observed}{
+  \node[anchor=west, text=ink, font=\tiny] at (3.68,\y) {\fam};
+  \node[anchor=west, text=muted, font=\tiny] at (6.05,\y) {\tc\,tech};
+  \fill[\tint, rounded corners=3pt] (7.35,\y-0.16) rectangle (9.22,\y+0.16);
+  \fill[\dc] (7.56,\y) circle (0.05);
+  \node[text=\tx, font=\tiny] at (8.44,\y) {\lab};
+}
+% ---- right panel: confidence status ----
+\draw[fill=white, draw=cardbd, line width=0.5pt, rounded corners=3pt] (9.58,0.45) rectangle (15.70,6.00);
+\node[anchor=west, text=ink, font=\scriptsize\bfseries] at (9.78,5.66) {Confidence status};
+\node[anchor=east, text=muted, font=\tiny] at (15.52,5.66) {489 objects};
+\fill[cardbd] (9.73,5.44) rectangle (15.55,5.455);
+\foreach \y/\lab/\w/\col/\n in {%
+  5.06/Corroborated/0.75/green/48,
+  4.31/Attested/3.47/amber/222,
+  3.56/Observed/3.42/black!28/219}{
+  \node[anchor=west, text=ink, font=\tiny] at (9.78,\y) {\lab};
+  \fill[grayt, rounded corners=2pt] (11.55,\y-0.13) rectangle (15.02,\y+0.13);
+  \fill[\col, rounded corners=2pt] (11.55,\y-0.13) rectangle (11.55+\w,\y+0.13);
+  \node[anchor=west, text=muted, font=\tiny] at (15.14,\y) {\n};
+}
+\fill[cardbd] (9.73,3.06) rectangle (15.55,3.075);
+\foreach \y/\dc/\txt in {%
+  2.68/green/{Only \textbf{corroborated} is enforce-eligible (9.8\%)},
+  2.10/accent/{Grounded AI summaries: every claim cited or flagged},
+  1.52/amber/{Latency p50/p95: 157 / 194\,s},
+  0.94/muted/{Enrichment: MalwareBazaar + ThreatFox}}{
+  \fill[\dc] (9.92,\y) circle (0.055);
+  \node[anchor=west, text=ink, font=\tiny] at (10.08,\y) {\txt};
+}
+\end{tikzpicture}
+\end{document}
